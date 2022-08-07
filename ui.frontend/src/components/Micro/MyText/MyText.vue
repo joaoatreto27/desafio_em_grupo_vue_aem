@@ -15,7 +15,7 @@ export default {
     },
     msgColor: {
         type: String,
-        default: '#000000'
+        default: ''
     }
   },
 };
