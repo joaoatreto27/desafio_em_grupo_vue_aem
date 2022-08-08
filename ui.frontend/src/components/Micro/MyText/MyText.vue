@@ -10,8 +10,8 @@ export default {
   name: "MyText",
   props: {
     msgHeader: {
-        type: String,
-        default: 'Forms'
+      type: String,
+      default: 'Forms'
     },
     msgHeaderColor: {
         type: String,
@@ -21,8 +21,8 @@ export default {
       type: String,
       default: 'inter'
     }
-  },
-};
+  }
+}
 </script>
 
 <style lang="scss" scooped>
