@@ -1,6 +1,6 @@
 <template>
   <div>
-    <p :class="TextHeaderClass" :style="{ 'color' : msgColor}">{{ msgHeader }}</p>
+    <p :class="TextHeaderClass" :style="{ 'color' : msgHeaderColor}">{{ msgHeader }}</p>
   </div>
 </template>
 
@@ -13,7 +13,7 @@ export default {
         type: String,
         default: 'Forms'
     },
-    msgColor: {
+    msgHeaderColor: {
         type: String,
         default: '#111111'
     },
