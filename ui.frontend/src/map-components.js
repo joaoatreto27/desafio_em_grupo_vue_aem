@@ -7,7 +7,7 @@ import Header from './components/Header/Header'
 import Footer from './components/Footer/Footer'
 import Image from './components/Image/Image'
 import Main from './components/Main/Main'
-import MyCheckbox from './components/Micro/MyCheckbox/MyCheckbox'
+
 import {
   withComponentMappingContext,
   AllowedComponentsContainer,
@@ -77,3 +77,11 @@ MapTo('vue/components/container')(
     }
   }
 )
+
+// Button Component Mapping
+MapTo('vue/components/button')(Button, {
+  emptyLabel: 'Button',
+  isEmpty: function (props) {
+    return !props || !props.text || props.text.trim().length < 1
+  }
+})

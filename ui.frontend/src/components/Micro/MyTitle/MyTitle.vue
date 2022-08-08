@@ -1,6 +1,6 @@
 <template>
   <div class="containerTitle">
-    <h1 :style="{ 'color' : TitleColor }">{{ TitleHeader }} Tab</h1>
+    <h1 :class="TitleHeaderClass" :style="{ 'color' : TitleHeaderColor }">{{ TitleHeader }} Tab</h1>
   </div>
 </template>
 
@@ -13,9 +13,13 @@ export default {
       type: String,
       default: 'First'
     },
-    TitleColor: {
+    TitleHeaderColor: {
+        type: String,
+        default: '#074ee8' 
+    },
+    TitleHeaderClass: {
       type: String,
-      default: '#074ee8'
+      default: 'inter'
     }
   }
 }
@@ -23,8 +27,9 @@ export default {
 
 <style lang="scss" scoped>
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@200&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@1,200&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Space+Mono&display=swap");
 .containerTitle {
-  font-family: "Inter", sans-serif;
   display: flex;
   flex-flow: column nowrap;
   align-items: flex-start;
@@ -34,6 +39,17 @@ export default {
     margin: 0;
     color: #074ee8;
     font-weight: 700;
+    .inter {
+    font-family: "Inter", sans-serif;
+    }
+
+    .nunito {
+    font-family: 'Nunito', sans-serif;
+    }
+
+    .space-mono{
+    font-family: "Space Mono", monospace;
+    }
 
     @media (max-width: 1550px){
       font-size: 2em;
