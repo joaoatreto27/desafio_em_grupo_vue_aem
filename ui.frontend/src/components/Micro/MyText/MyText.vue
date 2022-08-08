@@ -20,6 +20,7 @@ export default {
     TextHeaderClass: {
       type: String,
       default: 'inter'
+
     }
   }
 }
