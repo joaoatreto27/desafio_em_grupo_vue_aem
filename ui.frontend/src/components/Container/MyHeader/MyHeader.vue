@@ -6,17 +6,17 @@
 </template>
 
 <script>
-import MyText from "../../Micro/MyText/MyText.vue"
-import MyTitle from "../../Micro/MyTitle/MyTitle.vue"
+import MyText from '../../Micro/MyText/MyText.vue'
+import MyTitle from '../../Micro/MyTitle/MyTitle.vue'
 
 export default {
   // eslint-disable-next-line
   name: "MyHeader",
   components: {
     MyText,
-    MyTitle,
+    MyTitle
   }
-};
+}
 </script>
 
 <style lang="scss" scooped>

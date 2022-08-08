@@ -15,58 +15,58 @@
 
 <script>
 export default {
-  name: "MyInputs",
+  name: 'MyInputs',
   props: {
     idSpan: {
-        type: String,
-        default: ''
+      type: String,
+      default: ''
     },
     ClassSpan: {
-        type: String,
-        default: 'nunito-span'
+      type: String,
+      default: 'nunito-span'
     },
     SpanColor: {
-        type: String,
-        default: '#ff0000'
+      type: String,
+      default: '#ff0000'
     },
     InvalidSpan: {
-        type: String,
-        default: 'Invalid'
+      type: String,
+      default: 'Invalid'
     },
     ClassLabel: {
-        type: String,
-        default: 'nunito-label'
+      type: String,
+      default: 'nunito-label'
     },
     LabelInput: {
-        type: String,
-        default: 'Label'
+      type: String,
+      default: 'Label'
     },
     Type: {
-        type: String,
-        default: 'text'
+      type: String,
+      default: 'text'
     },
     ClassInput: {
-        type: String,
-        default: 'nunito-input'
+      type: String,
+      default: 'nunito-input'
     },
     Placeholder: {
-        type: String,
-        default: 'PlaceHolder'
+      type: String,
+      default: 'PlaceHolder'
     },
     idInputs: {
-        type: String,
-        default: ''
+      type: String,
+      default: ''
     },
     valueInput: {
-        type: String,
-        default: ''
+      type: String,
+      default: ''
     },
     LabelColor: {
-        type: String,
-        default: '#767676'
+      type: String,
+      default: '#767676'
     }
-  }, 
-};
+  }
+}
 </script>
 <style lang="scss" scoped>
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@200&display=swap');

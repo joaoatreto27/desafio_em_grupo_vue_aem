@@ -14,8 +14,8 @@ export default {
       default: 'Forms'
     },
     msgHeaderColor: {
-        type: String,
-        default: '#111111'
+      type: String,
+      default: '#111111'
     },
     TextHeaderClass: {
       type: String,
