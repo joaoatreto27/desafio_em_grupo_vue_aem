@@ -46,7 +46,6 @@ MapTo('vue/components/main')(Main, EditConfig)
 MapTo('vue/components/footer')(Footer, EditConfig)
 
 // Checkbox Component Mapping
-MapTo('vue/components/mycheckbox')(MyCheckbox, EditConfig)
 
 // Image Component Mapping
 MapTo('vue/components/image')(Image, {
@@ -77,11 +76,3 @@ MapTo('vue/components/container')(
     }
   }
 )
-
-// Button Component Mapping
-MapTo('vue/components/button')(Button, {
-  emptyLabel: 'Button',
-  isEmpty: function (props) {
-    return !props || !props.text || props.text.trim().length < 1
-  }
-})

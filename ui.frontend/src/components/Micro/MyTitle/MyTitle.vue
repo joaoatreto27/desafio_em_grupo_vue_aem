@@ -14,8 +14,8 @@ export default {
       default: 'First'
     },
     TitleHeaderColor: {
-        type: String,
-        default: '#074ee8' 
+      type: String,
+      default: '#074ee8'
     },
     TitleHeaderClass: {
       type: String,
