@@ -10,15 +10,15 @@ export default {
   name: "MyText",
   props: {
     msgHeader: {
-        type: String,
-        default: 'Forms'
+      type: String,
+      default: 'Forms'
     },
     msgColor: {
-        type: String,
-        default: ''
+      type: String,
+      default: ''
     }
-  },
-};
+  }
+}
 </script>
 
 <style lang="scss" scooped>

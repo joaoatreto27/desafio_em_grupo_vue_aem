@@ -6,19 +6,19 @@
 
 <script>
 export default {
-  //eslint-disable-next-line
+  // eslint-disable-next-line
   name: "MyTitle",
   props: {
     TitleHeader: {
-        type: String,
-        default: 'First'
+      type: String,
+      default: 'First'
     },
     TitleColor: {
-        type: String,
-        default: '#074ee8' 
+      type: String,
+      default: '#074ee8'
     }
-  },
-};
+  }
+}
 </script>
 
 <style lang="scss" scoped>
