@@ -1,6 +1,6 @@
 <template>
   <div>
-    <p :style="{ 'color' : msgColor}">{{ msgHeader }}</p>
+    <p :class="className" :style="{ 'color' : msgColor}">{{ msgHeader }}</p>
   </div>
 </template>
 
@@ -10,15 +10,19 @@ export default {
   name: "MyText",
   props: {
     msgHeader: {
-        type: String,
-        default: 'Forms'
+      type: String,
+      default: 'Forms'
     },
     msgColor: {
-        type: String,
-        default: ''
+      type: String,
+      default: ''
+    },
+    className: {
+      type: String,
+      default: 'text'
     }
-  },
-};
+  }
+}
 </script>
 
 <style lang="scss" scooped>
