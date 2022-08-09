@@ -1,6 +1,6 @@
 <template>
   <div>
-    <p :class="TextHeaderClass" :style="{ 'color' : msgHeaderColor}">{{ msgHeader }}</p>
+    <p :class="className" :style="{ 'color' : color}">{{ msg }}</p>
   </div>
 </template>
 
@@ -9,15 +9,15 @@ export default {
   // eslint-disable-next-line
   name: "MyText",
   props: {
-    msgHeader: {
+    msg: {
       type: String,
       default: 'Forms'
     },
-    msgHeaderColor: {
+    color: {
       type: String,
       default: '#111111'
     },
-    TextHeaderClass: {
+    className: {
       type: String,
       default: 'inter'
 
@@ -51,5 +51,6 @@ p {
   @media (max-width: 768px) {
     font-size: 1.1em;
   }
+
 }
 </style>
