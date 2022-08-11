@@ -27,13 +27,9 @@
 </template>
 
 <script>
-import MyText from '../../Micro/MyText/MyText.vue'
 import { mapActions } from 'vuex'
 export default {
   name: 'MyMenu',
-  componets: {
-    MyText
-  },
   data () {
     return {
       basic: false,
@@ -61,11 +57,6 @@ export default {
     }
   },
   methods: {
-    ...mapActions([
-      'SetBasic',
-      'SetSocial',
-      'SetCertificates'
-    ]),
     nav1 () {
       this.basic = false
       this.basicOn = true
@@ -73,9 +64,8 @@ export default {
       this.socialOn = false
       this.certificates = true
       this.certificatesOn = false
-      // vuex
-      // this.$store.state.SetBasic(false)
-      console.log(this.$store.state.basic)
+      this.$store.state.tab = 'basic'
+      //console.log(this.$store.state.tab)
     },
     nav2 () {
       this.basic = true
@@ -84,7 +74,7 @@ export default {
       this.socialOn = true
       this.certificates = true
       this.certificatesOn = false
-      // this.$emit("nav", "social");
+      this.$store.state.tab = 'sicial'
     },
     nav3 () {
       this.basic = true
@@ -93,7 +83,7 @@ export default {
       this.socialOn = false
       this.certificates = false
       this.certificatesOn = true
-      // this.$emit("nav", "certificates");
+      this.$store.state.tab = 'certificates'
     }
 
   }

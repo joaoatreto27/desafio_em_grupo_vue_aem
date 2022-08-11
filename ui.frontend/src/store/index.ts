@@ -5,44 +5,17 @@ Vue.use(Vuex)
 
 const store = new Store({
   state: {
-    basic: true,
-    social: false,
-    certificates: false,
-    success: false
+    tab: 'basic'
   },
-  getters: {
-    getBasic (state) {
-      return state.basic
-    },
-    getSocial (state) {
-      return state.social
-    },
-    getCertificates (state) {
-      return state.certificates
-    }
-  },
+  getters: {},
   mutations: {
-    setBasic (state, basic) {
-      state.basic = basic
-      console.log('aqui')
-    },
-    setSocial (state, social) {
-      state.social = social
-    },
-    setCertificates (state, certificates) {
-      state.certificates = certificates
+    setTab (state, tab) {
+      state.tab = tab
     }
-
   },
   actions: {
-    setSocial ({ commit }, social) {
-      commit('setSocial', social)
-    },
-    setBasic ({ commit }, basic) {
-      commit('setBasic', basic)
-    },
-    setCertificates ({ commit }, certificates) {
-      commit('setCertificates', certificates)
+    setTab ({ commit }, tab) {
+      commit('setTab', tab)
     }
   },
   modules: {}
