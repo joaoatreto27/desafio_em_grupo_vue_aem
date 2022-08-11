@@ -27,7 +27,6 @@
 </template>
 
 <script>
-import { mapActions } from 'vuex'
 export default {
   name: 'MyMenu',
   data () {
@@ -65,7 +64,7 @@ export default {
       this.certificates = true
       this.certificatesOn = false
       this.$store.state.tab = 'basic'
-      //console.log(this.$store.state.tab)
+      // console.log(this.$store.state.tab)
     },
     nav2 () {
       this.basic = true
@@ -74,7 +73,7 @@ export default {
       this.socialOn = true
       this.certificates = true
       this.certificatesOn = false
-      this.$store.state.tab = 'sicial'
+      this.$store.state.tab = 'social'
     },
     nav3 () {
       this.basic = true
