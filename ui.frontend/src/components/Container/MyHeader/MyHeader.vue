@@ -1,13 +1,25 @@
 <template>
-  <div class="headercontainer">
-    <MyText msgHeader="Forms" />
-    <MyTitle TitleHeader="First"/>
+  <div>
+    <div class="headercontainer" v-if="this.$store.state.tab == 'basic'">
+      <MyText msg="Forms" />
+      <MyTitle TitleHeader="First"/>
+    </div>
+    <div class="headercontainer" v-if="this.$store.state.tab == 'social'">
+      <MyText msg="Forms" />
+      <MyTitle TitleHeader="Second"/>
+    </div>
+    <div class="headercontainer" v-if="this.$store.state.tab == 'certificates'">
+      <MyText msg="Forms" />
+      <MyTitle TitleHeader="third"/>
+    </div>
   </div>
+
 </template>
 
 <script>
 import MyText from '../../Micro/MyText/MyText.vue'
 import MyTitle from '../../Micro/MyTitle/MyTitle.vue'
+import { mapActions } from 'vuex'
 
 export default {
   // eslint-disable-next-line

@@ -27,12 +27,8 @@
 </template>
 
 <script>
-import MyText from '../../Micro/MyText/MyText.vue'
 export default {
   name: 'MyMenu',
-  componets: {
-    MyText
-  },
   data () {
     return {
       basic: false,
@@ -67,7 +63,8 @@ export default {
       this.socialOn = false
       this.certificates = true
       this.certificatesOn = false
-      // this.$emit("nav", "basic");
+      this.$store.state.tab = 'basic'
+      // console.log(this.$store.state.tab)
     },
     nav2 () {
       this.basic = true
@@ -76,7 +73,7 @@ export default {
       this.socialOn = true
       this.certificates = true
       this.certificatesOn = false
-      // this.$emit("nav", "social");
+      this.$store.state.tab = 'social'
     },
     nav3 () {
       this.basic = true
@@ -85,7 +82,7 @@ export default {
       this.socialOn = false
       this.certificates = false
       this.certificatesOn = true
-      // this.$emit("nav", "certificates");
+      this.$store.state.tab = 'certificates'
     }
 
   }
