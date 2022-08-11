@@ -9,6 +9,7 @@ import Image from './components/Image/Image'
 import Main from './components/Main/Main'
 import MyMenu from './components/Micro/MyMenu/MyMenu'
 import MyHeader from './components/Container/MyHeader/MyHeader'
+import MyMain from './components/Container/MyMain/MyMain'
 
 import {
   withComponentMappingContext,
@@ -50,7 +51,11 @@ MapTo('vue/components/footer')(Footer, EditConfig)
 // Menu Component Mapping
 MapTo('vue/components/my-menu')(MyMenu)
 
+// Header Component Mapping
 MapTo('vue/components/my-header')(MyHeader)
+
+// Main Component Mapping
+MapTo('vue/components/my-main')(MyMain)
 
 // Checkbox Component Mapping
 

@@ -1,7 +1,7 @@
 <template>
   <div>
     <div class="headercontainer" v-if="this.$store.state.tab == 'basic'">
-      <MyText msg="Forms" />
+      <MyText :msg="headerTextFist" :color="headerColorFirst" />
       <MyTitle TitleHeader="First"/>
     </div>
     <div class="headercontainer" v-if="this.$store.state.tab == 'social'">
@@ -27,6 +27,16 @@ export default {
   components: {
     MyText,
     MyTitle
+  },
+  props: {
+    headerTextFist: {
+      type: String,
+      default: 'Forms'
+    },
+    headerColorFirst: {
+      type: String,
+      default: '#fff'
+    }
   }
 }
 </script>
