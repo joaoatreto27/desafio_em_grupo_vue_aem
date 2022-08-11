@@ -1,13 +1,20 @@
 <template>
     <div class="main">
-        <p>Teste Main</p>
-        <MyBasic v-if="this.$store.state.tab == 'basic'"/>
-        <MySocial v-if="this.$store.state.tab == 'social'"/>
-        <MyCertificates v-if="this.$store.state.tab == 'certificates'"/>
+        <div class="card">
+            <div class="title-card">
+                <p>Teste Main</p>
+            </div>
+            <MyMenu />
+            <MyBasic v-if="this.$store.state.tab == 'basic'"/>
+            <MySocial v-if="this.$store.state.tab == 'social'"/>
+            <MyCertificates v-if="this.$store.state.tab == 'certificates'"/>
+        </div>
+
     </div>
 </template>
 
 <script>
+import MyMenu from '../../Micro/MyMenu/MyMenu.vue'
 import MyBasic from '../../Container/MyBasic/MyBasic.vue'
 import MySocial from '../../Container/MySocial/MySocial.vue'
 import MyCertificates from '../../Container/MyCertificates/MyCertificates.vue'
@@ -17,7 +24,8 @@ export default {
   components: {
     MyBasic,
     MySocial,
-    MyCertificates
+    MyCertificates,
+    MyMenu
   }
 
 }
