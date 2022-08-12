@@ -27,7 +27,7 @@ export default {
 .checkbox {
     display: flex;
     flex-direction: row;
-    align-items: flex-start;
+    align-items: center;
 
     input {
         background-color: #074EE8;
@@ -41,6 +41,7 @@ export default {
         font-family: "Nunito";
         font-weight: 400;
         font-size: 16px;
+        color: #111111;
     }
 }
 
