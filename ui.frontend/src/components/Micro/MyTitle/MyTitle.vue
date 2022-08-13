@@ -1,6 +1,6 @@
 <template>
   <div class="containerTitle">
-    <h1 :class="TitleHeaderClass" :style="{ 'color' : TitleHeaderColor }">{{ TitleHeader }} Tab</h1>
+    <h1 :class="TitleHeaderClass" :style="{ 'color' : color }">{{ msg }}</h1>
   </div>
 </template>
 
@@ -9,11 +9,11 @@ export default {
   // eslint-disable-next-line
   name: "MyTitle",
   props: {
-    TitleHeader: {
+    msg: {
       type: String,
-      default: 'First'
+      default: 'default'
     },
-    TitleHeaderColor: {
+    color: {
       type: String,
       default: '#074ee8'
     },
