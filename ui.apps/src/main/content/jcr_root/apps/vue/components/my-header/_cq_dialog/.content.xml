@@ -24,7 +24,311 @@
           jcr:primaryType="nt:unstructured"
           jcr:title="Vue - MyHeader"
           sling:resourceType="cq/gui/components/authoring/dialog">
-   <content jcr:primaryType="nt:unstructured"
+   <content
+        jcr:primaryType="nt:unstructured"
+        sling:resourceType="granite/ui/components/coral/foundation/container">
+        <items
+            jcr:primaryType="nt:unstructured">
+            <tabs
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="granite/ui/components/coral/foundation/tabs">
+                <items
+                    jcr:primaryType="nt:unstructured">
+                    <!-- Conteúdo -->
+                    <title
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="Conteúdo"
+                        sling:resourceType="granite/ui/components/coral/foundation/container">
+                        <layout
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="granite/ui/components/coral/foundation/fixedcolumns"/>
+                        <items 
+                            jcr:primaryType="nt:unstructured">
+                            <headerText cq-msm-lockable="./headerText"
+                              fieldLabel="Texto padrão"
+                              jcr:primaryType="nt:unstructured"
+                              name="./headerText"
+                              sling:resourceType="granite/ui/components/coral/foundation/form/textfield"/>
+                           <headerTitleFirst cq-msm-lockable="./headerTitleFirst"
+                              fieldLabel="Texto Tab 1"
+                              jcr:primaryType="nt:unstructured"
+                              name="./headerTitleFirst"
+                              sling:resourceType="granite/ui/components/coral/foundation/form/textfield"/>
+                           <headerTitleSecond cq-msm-lockable="./headerTitleSecond"
+                              fieldLabel="Texto Tab 2"
+                              jcr:primaryType="nt:unstructured"
+                              name="./headerTitleSecond"
+                              sling:resourceType="granite/ui/components/coral/foundation/form/textfield"/>
+                            <headerTitleThird cq-msm-lockable="./headerTitleThird"
+                              fieldLabel="Texto Tab 3"
+                              jcr:primaryType="nt:unstructured"
+                              name="./headerTitleThird"
+                              sling:resourceType="granite/ui/components/coral/foundation/form/textfield"/>
+                              <headerTitleSuccess cq-msm-lockable="./headerTitleSuccess"
+                                 fieldLabel="Texto Tab 4"
+                                 jcr:primaryType="nt:unstructured"
+                                 name="./headerTitleSuccess"
+                                 sling:resourceType="granite/ui/components/coral/foundation/form/textfield"/>
+                        </items>
+                    </title>
+                    <!-- Estilo -->
+                    <content
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="Estilização"
+                        sling:resourceType="granite/ui/components/coral/foundation/container">
+                        <layout
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="granite/ui/components/coral/foundation/fixedcolumns"/>
+                        <items 
+                            jcr:primaryType="nt:unstructured">
+                            <headerFont 
+                                cq-msm-lockable="./headerFont"
+                                defaultValue="Inter"
+                                fieldLabel="Selecione a fonte:"
+                                jcr:primaryType="nt:unstructured"
+                                name="./headerFont"
+                                sling:resourceType="granite/ui/components/coral/foundation/form/select"
+                                value="false">
+                                <items jcr:primaryType="nt:unstructured">
+                                        <Inter jcr:primaryType="nt:unstructured" text="Inter" value="Inter"/>
+                                        <Nunito jcr:primaryType="nt:unstructured" text="Nunito" value="Nunito"/>
+                                        <SpaceMono jcr:primaryType="nt:unstructured" text="SpaceMono" value="Space Mono"/>
+                                        <Inconsolata jcr:primaryType="nt:unstructured" text="Inconsolata" value="Inconsolata"/>
+                                        <Montserrat jcr:primaryType="nt:unstructured" text="Montserrat" value="Montserrat"/>      
+                                </items>
+                            </headerFont> 
+                            <headerTextColor
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/form/colorfield"
+                                fieldLabel="Cor do texto padrão"
+                                showDefaultColors="false"
+                                name="./headerTextColor">
+                                <items
+                                    jcr:primaryType="nt:unstructured">
+                                    <preto
+                                        jcr:primaryType="nt:unstructured"
+                                        value="#000000"/>
+                                    <azul
+                                        jcr:primaryType="nt:unstructured"
+                                        value="#0000FF"/>
+                                    <verde
+                                        jcr:primaryType="nt:unstructured"
+                                        value="#00FF00"/>
+                                    <vermelho
+                                        jcr:primaryType="nt:unstructured"
+                                        value="#FF0000"/>
+                                    <cinza
+                                        jcr:primaryType="nt:unstructured"
+                                        value="#898686"/>
+                                    <branco
+                                        jcr:primaryType="nt:unstructured"
+                                        value="#FFFFFF"/>
+                                    <rosa
+                                        jcr:primaryType="nt:unstructured"
+                                        value="#FF00FF"/>
+                                    <laranja
+                                        jcr:primaryType="nt:unstructured"
+                                        value="#FFA500"/>
+                                    <roxo 
+                                        jcr:primaryType="nt:unstructured"
+                                        value="#800080"/>
+                                    <marrom 
+                                        jcr:primaryType="nt:unstructured"
+                                        value="#8B4513"/>
+                                    <azul-claro
+                                        jcr:primaryType="nt:unstructured"
+                                        value="#00FFFF"/>
+                                    <verde-claro
+                                        jcr:primaryType="nt:unstructured"
+                                        value="#00FF00"/>
+                                    <vermelho-claro
+                                        jcr:primaryType="nt:unstructured"
+                                        value="#FF0000"/>
+                                    <cinza-claro
+                                        jcr:primaryType="nt:unstructured"
+                                        value="#C0C0C0"/>
+                                    <laranja-claro
+                                        jcr:primaryType="nt:unstructured"
+                                        value="#e6d218"/>
+                                </items>
+                            </headerTextColor>
+                           <headerTitleColor
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/form/colorfield"
+                                fieldLabel="Cor do texto Tabs"
+                                showDefaultColors="false"
+                                name="./headerTitleColor">
+                                <items
+                                    jcr:primaryType="nt:unstructured">
+                                    <preto
+                                        jcr:primaryType="nt:unstructured"
+                                        value="#000000"/>
+                                    <azul
+                                        jcr:primaryType="nt:unstructured"
+                                        value="#0000FF"/>
+                                    <verde
+                                        jcr:primaryType="nt:unstructured"
+                                        value="#00FF00"/>
+                                    <vermelho
+                                        jcr:primaryType="nt:unstructured"
+                                        value="#FF0000"/>
+                                    <cinza
+                                        jcr:primaryType="nt:unstructured"
+                                        value="#898686"/>
+                                    <branco
+                                        jcr:primaryType="nt:unstructured"
+                                        value="#FFFFFF"/>
+                                    <rosa
+                                        jcr:primaryType="nt:unstructured"
+                                        value="#FF00FF"/>
+                                    <laranja
+                                        jcr:primaryType="nt:unstructured"
+                                        value="#FFA500"/>
+                                    <roxo 
+                                        jcr:primaryType="nt:unstructured"
+                                        value="#800080"/>
+                                    <marrom 
+                                        jcr:primaryType="nt:unstructured"
+                                        value="#8B4513"/>
+                                    <azul-claro
+                                        jcr:primaryType="nt:unstructured"
+                                        value="#00FFFF"/>
+                                    <verde-claro
+                                        jcr:primaryType="nt:unstructured"
+                                        value="#00FF00"/>
+                                    <vermelho-claro
+                                        jcr:primaryType="nt:unstructured"
+                                        value="#FF0000"/>
+                                    <cinza-claro
+                                        jcr:primaryType="nt:unstructured"
+                                        value="#C0C0C0"/>
+                                    <laranja-claro
+                                        jcr:primaryType="nt:unstructured"
+                                        value="#e6d218"/>
+                                </items>
+                            </headerTitleColor>
+                           <headerColor
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/form/colorfield"
+                                fieldLabel="Cor do fundo"
+                                showDefaultColors="false"
+                                name="./headerColor">
+                                <items
+                                    jcr:primaryType="nt:unstructured">
+                                    <preto
+                                        jcr:primaryType="nt:unstructured"
+                                        value="#000000"/>
+                                    <azul
+                                        jcr:primaryType="nt:unstructured"
+                                        value="#0000FF"/>
+                                    <verde
+                                        jcr:primaryType="nt:unstructured"
+                                        value="#00FF00"/>
+                                    <vermelho
+                                        jcr:primaryType="nt:unstructured"
+                                        value="#FF0000"/>
+                                    <cinza
+                                        jcr:primaryType="nt:unstructured"
+                                        value="#898686"/>
+                                    <branco
+                                        jcr:primaryType="nt:unstructured"
+                                        value="#FFFFFF"/>
+                                    <rosa
+                                        jcr:primaryType="nt:unstructured"
+                                        value="#FF00FF"/>
+                                    <laranja
+                                        jcr:primaryType="nt:unstructured"
+                                        value="#FFA500"/>
+                                    <roxo 
+                                        jcr:primaryType="nt:unstructured"
+                                        value="#800080"/>
+                                    <marrom 
+                                        jcr:primaryType="nt:unstructured"
+                                        value="#8B4513"/>
+                                    <azul-claro
+                                        jcr:primaryType="nt:unstructured"
+                                        value="#00FFFF"/>
+                                    <verde-claro
+                                        jcr:primaryType="nt:unstructured"
+                                        value="#00FF00"/>
+                                    <vermelho-claro
+                                        jcr:primaryType="nt:unstructured"
+                                        value="#FF0000"/>
+                                    <cinza-claro
+                                        jcr:primaryType="nt:unstructured"
+                                        value="#C0C0C0"/>
+                                    <laranja-claro
+                                        jcr:primaryType="nt:unstructured"
+                                        value="#e6d218"/>
+                                </items>
+                            </headerColor>
+                           <headerColorBorder                        
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/form/colorfield"
+                                fieldLabel="Cor da borda"
+                                showDefaultColors="false"
+                                name="./headerColorBorder">
+                                <items
+                                    jcr:primaryType="nt:unstructured">
+                                    <preto
+                                        jcr:primaryType="nt:unstructured"
+                                        value="#000000"/>
+                                    <azul
+                                        jcr:primaryType="nt:unstructured"
+                                        value="#0000FF"/>
+                                    <verde
+                                        jcr:primaryType="nt:unstructured"
+                                        value="#00FF00"/>
+                                    <vermelho
+                                        jcr:primaryType="nt:unstructured"
+                                        value="#FF0000"/>
+                                    <cinza
+                                        jcr:primaryType="nt:unstructured"
+                                        value="#898686"/>
+                                    <branco
+                                        jcr:primaryType="nt:unstructured"
+                                        value="#FFFFFF"/>
+                                    <rosa
+                                        jcr:primaryType="nt:unstructured"
+                                        value="#FF00FF"/>
+                                    <laranja
+                                        jcr:primaryType="nt:unstructured"
+                                        value="#FFA500"/>
+                                    <roxo 
+                                        jcr:primaryType="nt:unstructured"
+                                        value="#800080"/>
+                                    <marrom 
+                                        jcr:primaryType="nt:unstructured"
+                                        value="#8B4513"/>
+                                    <azul-claro
+                                        jcr:primaryType="nt:unstructured"
+                                        value="#00FFFF"/>
+                                    <verde-claro
+                                        jcr:primaryType="nt:unstructured"
+                                        value="#00FF00"/>
+                                    <vermelho-claro
+                                        jcr:primaryType="nt:unstructured"
+                                        value="#FF0000"/>
+                                    <cinza-claro
+                                        jcr:primaryType="nt:unstructured"
+                                        value="#C0C0C0"/>
+                                    <laranja-claro
+                                        jcr:primaryType="nt:unstructured"
+                                        value="#e6d218"/>
+                                </items>
+                            </headerColorBorder>
+                        </items>
+                    </content>
+                    
+
+                </items>
+            </tabs>
+        </items>
+    </content>
+
+
+
+   <!-- <content jcr:primaryType="nt:unstructured"
             sling:resourceType="granite/ui/components/coral/foundation/container">
       <layout jcr:primaryType="nt:unstructured"
               margin="{Boolean}false"
@@ -81,5 +385,5 @@
             </items>
          </column>
       </items>
-   </content>
+   </content> -->
 </jcr:root>
