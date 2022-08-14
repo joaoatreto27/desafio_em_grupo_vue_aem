@@ -1,16 +1,20 @@
 <template>
-  <div>
+  <div :style="{ 'font-family': headerFont , 'background-color': headerColor , 'border-bottom': headerColorBorder }">
     <div class="headercontainer" v-if="this.$store.state.tab == 'basic'">
-      <MyText :msg="headerTextFist" :color="headerColorFirst" />
-      <MyTitle TitleHeader="First"/>
+      <MyText class="text-header" :msg="headerText" :color="headerTextColor" />
+      <MyTitle class="text-header" :msg="headerTitleFirst" :color="headerTitleColor"/>
     </div>
     <div class="headercontainer" v-if="this.$store.state.tab == 'social'">
-      <MyText msg="Forms" />
-      <MyTitle TitleHeader="Second"/>
+      <MyText class="text-header" :msg="headerText" :color="headerTextColor" />
+      <MyTitle class="text-header" :msg="headerTitleSecond" :color="headerTitleColor"/>
     </div>
     <div class="headercontainer" v-if="this.$store.state.tab == 'certificates'">
-      <MyText msg="Forms" />
-      <MyTitle TitleHeader="third"/>
+      <MyText class="text-header" :msg="headerText" :color="headerTextColor"/>
+      <MyTitle class="text-header" :msg="headerTitleThird" :color="headerTitleColor"/>
+    </div>
+    <div class="headercontainer" v-if="this.$store.state.tab == 'success'">
+      <MyText class="text-header" :msg="headerText" :color="headerTextColor"/>
+      <MyTitle class="text-header" :msg="headerTitleSuccess" :color="headerTitleColor"/>
     </div>
   </div>
 
@@ -29,38 +33,46 @@ export default {
     MyTitle
   },
   props: {
-    headerTextFist: {
+    headerText: {
       type: String,
       default: 'Forms'
     },
-    headerColorFirst: {
+    headerTitleFirst: {
       type: String,
-      default: '#fff'
+      default: 'First Tab'
+    },
+    headerTitleSecond: {
+      type: String,
+      default: 'Second Tab'
+    },
+    headerTitleThird: {
+      type: String,
+      default: 'Third Tab'
+    },
+    headerTitleSuccess: {
+      type: String,
+      default: 'Success Tab'
+    },
+    headerTextColor: {
+      type: String,
+      default: 'black'
+    },
+    headerFont: {
+      type: String,
+      default: ''
+    },
+    headerColor: {
+      type: String,
+      default: '#e5e5e5'
+    },
+    headerColorBorder: {
+      type: String,
+      default: '2px solid #aaaaaa'
     }
   }
 }
 </script>
 
 <style lang="scss" scooped>
-.headercontainer {
-  background: #e5e5e5;
-  width: 100%;
-  padding: 30px 0px 30px 100px;
-  border-bottom: 2px solid #aaaaaa;
-  text-align: left;
-  @media (max-width: 1550px){
-    padding-bottom: 10px;
-  }
-  @media (max-width: 1400px){
-    padding-bottom: 5px;
-    padding-top: 5px;
-  }
-  @media (max-width: 768px) {
-    border-bottom: none;
-    padding-bottom: 15px;
-  }
-  @media (max-width: 600px) {
-    padding-left: 50px;
-  }
-}
+@import "./MyHeader.scss";
 </style>

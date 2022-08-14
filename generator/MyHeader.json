@@ -1,0 +1,97 @@
+{
+    "project-settings": {
+      "code-owner": "SPA Vue Project",
+      "bundle-path": "../core/src/main/java",
+      "test-path": "../core/src/test/java",
+      "apps-path": "../ui.apps/src/main/content/jcr_root/apps",
+      "component-path": "vue",
+      "model-interface-pkg": "com.vue.core.models",
+      "model-impl-pkg": "com.vue.core.models.impl"
+    },
+    "name": "my-header",
+    "title": "Vue - MyHeader",
+    "group": "SPA Vue Project - Content",
+    "type": "components",
+    "options": {
+      "js": false,
+      "jstxt": false,
+      "css": false,
+      "csstxt": false,
+      "html": false,
+      "html-content": false,
+      "slingmodel": true,
+      "testclass": false,
+      "junit-major-version": 5,
+      "content-exporter": true,
+      "model-adaptables": [
+        "request"
+      ],
+      "generic-javadoc": false,
+      "properties": [
+        {
+          "field": "headerText",
+          "label": "Texto padrão",
+          "type": "textfield",
+          "json-expose": true,
+          "json-property": "headerText"
+        },
+        {
+            "field": "headerTitleFirst",
+            "label": "Texto Tab 1",
+            "type": "textfield",
+            "json-expose": true,
+            "json-property": "headerTitleFirst"
+        },
+        {
+            "field": "headerTitleSecond",
+            "label": "Texto Tab 2",
+            "type": "textfield",
+            "json-expose": true,
+            "json-property": "headerTitleSecond"
+        },
+        {
+            "field": "headerTitleThird",
+            "label": "Texto Tab 3",
+            "type": "textfield",
+            "json-expose": true,
+            "json-property": "headerTitleThird"
+        },
+        {
+            "field": "headerTitleSuccess",
+            "label": "Texto Tab 4",
+            "type": "textfield",
+            "json-expose": true,
+            "json-property": "headerTitleSuccess"
+        },
+        {
+            "field": "headerTextColor",
+            "label": "Cor do texto padrão",
+            "type": "textfield",
+            "json-expose": true,
+            "json-property": "headerTextColor"
+        },
+        {
+            "field": "headerFont",
+            "label": "Fonte",
+            "type": "textfield",
+            "json-expose": true,
+            "json-property": "headerFont"
+        },
+        {
+            "field": "headerColor",
+            "label": "Cor do fundo",
+            "type": "textfield",
+            "json-expose": true,
+            "json-property": "headerColor"
+        },
+        {
+            "field": "headerColorBorder",
+            "label": "Cor da borda",
+            "type": "textfield",
+            "json-expose": true,
+            "json-property": "headerColorBorder"
+        }
+        
+      ]
+    }
+  }
