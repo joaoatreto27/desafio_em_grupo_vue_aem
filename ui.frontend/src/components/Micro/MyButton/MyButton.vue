@@ -7,7 +7,7 @@
 <script>
 
 export default {
-  name: 'Button',
+  name: 'MyButton',
   props: {
     text: {
       type: String,
@@ -19,12 +19,12 @@ export default {
   },
   methods: {
     event () {
-      this.$emit('click')
+      // this.$emit('click')
     }
   }
 }
 </script>
 
 <style lang="scss" scoped>
-@import './Button.scss';
+@import './MyButton.scss';
 </style>
