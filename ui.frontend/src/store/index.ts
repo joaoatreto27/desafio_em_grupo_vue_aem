@@ -5,7 +5,22 @@ Vue.use(Vuex)
 
 const store = new Store({
   state: {
-    tab: 'basic'
+    tab: 'basic',
+    fullname: '',
+    nickname: '',
+    email: '',
+    phone: '',
+    day: '',
+    month: '',
+    year: '',
+    age: '',
+    checkbox: true,
+    linkedin: '',
+    github: '',
+    certificates: '',
+    teamname: '',
+    institution: '',
+    graduation: ''
   },
   getters: {},
   mutations: {

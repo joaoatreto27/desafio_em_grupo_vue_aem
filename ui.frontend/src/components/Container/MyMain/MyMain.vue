@@ -1,8 +1,8 @@
 <template>
     <div class="main">
         <div class="card">
-            <div class="title-card" >
-                <MyTitle msg="Team Sign Up" nameClass="main-title" type="h3" v-if="this.$store.state.tab !== 'success'"/>
+            <div class="title-card">
+                <MyTitle  msg="Team Sign Up" nameClass="main-title" type="h3" v-if="this.$store.state.tab !== 'success'"/>
             </div>
             <MyMenu v-if="this.$store.state.tab !== 'success'"/>
             <MyBasic v-if="this.$store.state.tab == 'basic'"/>
