@@ -1,6 +1,9 @@
 <template>
   <div class="containerTitle">
-    <h1 :class="TitleHeaderClass" :style="{ 'color' : TitleHeaderColor }">{{ TitleHeader }} Tab</h1>
+    <h1 :class="nameClass" :style="{ 'color' : color }"  v-if="type === 'h1'" >{{ msg }}</h1>
+    <h2 :class="nameClass" :style="{ 'color' : color }"  v-if="type === 'h2'" >{{ msg }}</h2>
+    <h3 :class="nameClass" :style="{ 'color' : color }"  v-if="type === 'h3'" >{{ msg }}</h3>
+
   </div>
 </template>
 
@@ -9,55 +12,26 @@ export default {
   // eslint-disable-next-line
   name: "MyTitle",
   props: {
-    TitleHeader: {
+    msg: {
       type: String,
-      default: 'First'
+      default: 'default'
     },
-    TitleHeaderColor: {
+    color: {
       type: String,
-      default: '#074ee8'
+      default: 'black'
     },
-    TitleHeaderClass: {
+    nameClass: {
       type: String,
       default: 'inter'
+    },
+    type: {
+      type: String,
+      default: 'h1'
     }
   }
 }
 </script>
 
-<style lang="scss" scoped>
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@200&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@1,200&display=swap');
-@import url("https://fonts.googleapis.com/css2?family=Space+Mono&display=swap");
-.containerTitle {
-  display: flex;
-  flex-flow: column nowrap;
-  align-items: flex-start;
-
-  h1 {
-    font-size: 3em;
-    margin: 0;
-    color: #074ee8;
-    font-weight: 700;
-    .inter {
-    font-family: "Inter", sans-serif;
-    }
-
-    .nunito {
-    font-family: 'Nunito', sans-serif;
-    }
-
-    .space-mono{
-    font-family: "Space Mono", monospace;
-    }
-
-    @media (max-width: 1550px){
-      font-size: 2em;
-    }
-    @media (max-width: 1400px){
-      font-size: 1.5em;
-    }
-  }
-}
-
+<style lang="scss" scooped>
+@import "./MyTitle.scss";
 </style>

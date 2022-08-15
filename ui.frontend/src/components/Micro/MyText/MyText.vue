@@ -55,4 +55,6 @@ p {
   font-family: "Space Mono", monospace;
 }
 
+
+@import "./MyText.scss";
 </style>

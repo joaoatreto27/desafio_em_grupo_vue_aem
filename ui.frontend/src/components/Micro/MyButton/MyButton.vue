@@ -1,13 +1,14 @@
 <template>
 <div class="containerButton">
-    <button :class="classButton" @click.prevent="event">{{ text }}</button>
+    <button :class="classButton"  @click.prevent="event">{{ text }}</button>
+
 </div>
 </template>
 
 <script>
 
 export default {
-  name: 'Button',
+  name: 'MyButton',
   props: {
     text: {
       type: String,
@@ -15,16 +16,20 @@ export default {
     },
     classButton: {
       type: String
+    },
+    img: {
+      type: String,
+      default: 'url(("/../assets/Vector.png"))'
     }
   },
   methods: {
     event () {
-      this.$emit('click')
+      // this.$emit('click')
     }
   }
 }
 </script>
 
 <style lang="scss" scoped>
-@import './Button.scss';
+@import './MyButton.scss';
 </style>
