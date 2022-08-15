@@ -1,24 +1,21 @@
 <template>
-  <div>
+  <div class="mainBody">
 
     <div class="basicBirthday">
 
-      <MyBirthday />
+        <MyBirthday />
 
     </div>
 
     <div class="basicFooter">
-        <MyCheckbox
-        checkboxid="checkbox"
-        content="I accept the terms and privacy"
-        class="chkx"/>
+          <MyCheckbox
+          checkboxid="checkbox"
+          content="I accept the terms and privacy"
+          class="chkx"/>
 
-        <Button
-        classButton="Button ButtonNext"
-        text="Next >" class="btn"/>
+      <div class="containerButton" @click="next">
+          <MyButton text="Next" classButton="Button ButtonNext" />
       </div>
-    <div class="containerButton" @click="next">
-        <MyButton text="Next" classButton="Button ButtonNext" />
     </div>
   </div>
 </template>
@@ -26,16 +23,14 @@
 <script>
 
 import MyCheckbox from '../../Micro/MyCheckbox/MyCheckbox'
-import Button from '../../Micro/Button/Button'
+import MyButton from '../../Micro/MyButton/MyButton'
 import MyBirthday from '../../Container/MyBirthday/MyBirthday'
-import MyButton from '../../Micro/MyButton/MyButton.vue'
 export default {
   // eslint-disable-next-line
   name: 'MyBasic',
   components: {
     MyCheckbox,
-    Button,
-    MyBirthday
+    MyBirthday,
     MyButton
   },
   methods: {
@@ -49,4 +44,9 @@ export default {
 
 <style lang="scss" scooped>
 @import "./MyBasic.scss";
+
+.mainBody {
+  width: 84%;
+}
+
 </style>

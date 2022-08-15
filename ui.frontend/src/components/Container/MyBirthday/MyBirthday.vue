@@ -48,7 +48,7 @@
                 className="nunito"
                 msg="Age"/>
                 <div class="age">
-                    <p>69</p>
+                    <p>{{ age }}</p>
                 </div>
             </div>
         </div>
@@ -63,6 +63,54 @@ export default {
   name: 'MyBirthday',
   components: {
     MyText
+  },
+  data () {
+    return {
+      day: '',
+      month: '',
+      year: '',
+      age: 0,
+      control: [false, false, false]
+    }
+  },
+
+  methods: {
+    setDay (e) {
+      this.day = e.target.value
+      this.control[0] = true
+      this.calculateAge()
+    },
+
+    setMonth (e) {
+      this.month = e.target.value
+      this.control[1] = true
+      this.calculateAge()
+    },
+
+    setYear (e) {
+      this.year = e.target.value
+      this.control[2] = true
+      this.calculateAge()
+    },
+
+    calculateAge () {
+      if (!this.control[0] || !this.control[1] || !this.control[2]) {
+        return
+      }
+
+      const date = new Date()
+
+      let ageUser = date.getFullYear() - this.year
+      const actualMonth = date.getMonth() + 1
+      const actualDay = date.getDay()
+
+      if ((actualMonth < this.month ||
+            (actualMonth === this.month && actualDay < this.day)) && this.age > 0) {
+        ageUser--
+      }
+
+      this.age = ageUser
+    }
   }
 }
 
@@ -82,6 +130,9 @@ export default {
     background: #FFFFFF;
     border: 2px solid #AAAAAA;
     border-radius: 4px;
+    p {
+        margin: 0;
+    }
 }
 
 .birthdaySelect {
