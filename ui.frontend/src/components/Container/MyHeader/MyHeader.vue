@@ -59,7 +59,7 @@ export default {
     },
     headerFont: {
       type: String,
-      default: ''
+      default: 'Inter'
     },
     headerColor: {
       type: String,
@@ -68,6 +68,10 @@ export default {
     headerColorBorder: {
       type: String,
       default: '2px solid #aaaaaa'
+    },
+    headerTitleColor: {
+      type: String,
+      default: '#074ee8'
     }
   }
 }

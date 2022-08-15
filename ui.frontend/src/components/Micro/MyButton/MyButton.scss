@@ -14,10 +14,16 @@
     border: none;
     background-position-y: 50%;
     border-radius: 4px;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 18px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 
   .ButtonNext {
-    background-image: url("/../assets/Vector.png");
+    background-image: url("/Vector.png");
     background-repeat: no-repeat;
     background-size: 8px;
     background-position-x: calc(70%);
