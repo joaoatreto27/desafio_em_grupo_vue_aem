@@ -35,22 +35,24 @@ p {
   font-weight: 400;
   font-size: 1.2em;
   width: 100%;
-
-  .inter {
-    font-family: "Inter", sans-serif;
-  }
-
-  .nunito {
-    font-family: 'Nunito', sans-serif;
-  }
-
-  .space-mono{
-    font-family: "Space Mono", monospace;
-  }
+  color: #767676;
 
   @media (max-width: 768px) {
     font-size: 1.1em;
   }
 
 }
+
+.inter {
+    font-family: "Inter", sans-serif;
+  }
+
+.nunito {
+  font-family: 'Nunito', sans-serif;
+}
+
+.space-mono{
+  font-family: "Space Mono", monospace;
+}
+
 </style>
