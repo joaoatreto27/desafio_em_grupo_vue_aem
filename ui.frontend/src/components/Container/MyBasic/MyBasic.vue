@@ -33,7 +33,6 @@ export default {
   // eslint-disable-next-line
   name: 'MyBasic',
   components: {
-<<<<<<< HEAD
     MyCheckbox,
     Button,
     MyBirthday
