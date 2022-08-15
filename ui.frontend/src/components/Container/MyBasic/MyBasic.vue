@@ -24,6 +24,6 @@ export default {
 }
 </script>
 
-<style>
-
+<style lang="scss" scooped>
+@import "./MyBasic.scss";
 </style>

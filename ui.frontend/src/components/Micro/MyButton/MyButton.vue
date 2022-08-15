@@ -1,6 +1,7 @@
 <template>
 <div class="containerButton">
-    <button :class="classButton" @click.prevent="event">{{ text }}</button>
+    <button :class="classButton"  @click.prevent="event">{{ text }}</button>
+
 </div>
 </template>
 
@@ -15,6 +16,10 @@ export default {
     },
     classButton: {
       type: String
+    },
+    img: {
+      type: String,
+      default: 'url(("/../assets/Vector.png"))'
     }
   },
   methods: {
