@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div :id="textID">
     <p :class="className" :style="{ 'color' : color}">{{ msg }}</p>
   </div>
 </template>
@@ -20,7 +20,9 @@ export default {
     className: {
       type: String,
       default: 'inter'
-
+    },
+    textID: {
+      type: String
     }
   }
 }
@@ -41,6 +43,10 @@ p {
     font-size: 1.1em;
   }
 
+}
+
+#birthdayText {
+  margin: 0 20px 0 0;
 }
 
 .inter {

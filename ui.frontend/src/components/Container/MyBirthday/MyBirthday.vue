@@ -1,10 +1,19 @@
 <template>
 
     <div class="birthday">
+        <div class="birthdayTitle">
 
-        <MyText
-        className="nunito"
-        msg="Birthday *"/>
+          <MyText
+          textID="birthdayText"
+          className="nunito"
+          msg="Birthday *"/>
+
+          <span :id="idSpan"
+          :class="ClassSpan"
+          :style="{ 'color' : SpanColor}">
+          {{ InvalidSpan }}</span>
+
+        </div>
 
         <div class="birthdayBody">
             <div class="birthdayDay">
@@ -48,7 +57,7 @@
                 className="nunito"
                 msg="Age"/>
                 <div class="age">
-                    <p>{{ age }}</p>
+                    {{ age }}
                 </div>
             </div>
         </div>
@@ -71,6 +80,22 @@ export default {
       year: '',
       age: 0,
       control: [false, false, false]
+    }
+  },
+  props: {
+    idSpan: {
+      type: String
+    },
+    ClassSpan: {
+      type: String
+    },
+    SpanColor: {
+      type: String,
+      default: '#ff0000'
+    },
+    InvalidSpan: {
+      type: String,
+      default: 'Please enter your Age'
     }
   },
 
@@ -117,6 +142,12 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+
+.birthdayTitle {
+  display: flex;
+
+}
+
 .birthdayBody {
     display: flex;
     justify-content: space-between;
@@ -130,6 +161,8 @@ export default {
     background: #FFFFFF;
     border: 2px solid #AAAAAA;
     border-radius: 4px;
+    align-items: center;
+
     p {
         margin: 0;
     }
@@ -142,7 +175,6 @@ export default {
     background: #FFFFFF;
     border: 2px solid #AAAAAA;
     border-radius: 4px;
-    flex-grow: 0;
 
     .birthdayOption {
         font-weight: 400;
