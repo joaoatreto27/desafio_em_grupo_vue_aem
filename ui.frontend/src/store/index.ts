@@ -17,10 +17,27 @@ const store = new Store({
     checkbox: true,
     linkedin: '',
     github: '',
+    instagram: '',
+    twitter: '',
+    facebook: '',
+    personalizada: '',
     certificates: '',
     teamname: '',
     institution: '',
-    graduation: ''
+    graduation: '',
+    fieldLinkedin: true,
+    fieldGithub: false,
+    fieldInstagram: true,
+    fieldTwitter: false,
+    fieldFacebook: false,
+    fieldPersonalizada: false,
+    successLinkedin: false,
+    successGithub: true,
+    successInstagram: false,
+    successTwitter: false,
+    successFacebook: false,
+    successPersonalizada: false
+
   },
   getters: {},
   mutations: {
