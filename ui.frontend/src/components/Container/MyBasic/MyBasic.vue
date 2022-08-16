@@ -22,9 +22,9 @@
 
 <script>
 
-import MyCheckbox from '../../Micro/MyCheckbox/MyCheckbox'
-import MyButton from '../../Micro/MyButton/MyButton'
-import MyBirthday from '../../Container/MyBirthday/MyBirthday'
+import MyCheckbox from '../../Micro/MyCheckbox/MyCheckbox.vue'
+import MyButton from '../../Micro/MyButton/MyButton.vue'
+import MyBirthday from '../../Container/MyBirthday/MyBirthday.vue'
 export default {
   // eslint-disable-next-line
   name: 'MyBasic',
