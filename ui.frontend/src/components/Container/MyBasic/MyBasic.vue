@@ -1,50 +1,52 @@
 <template>
   <div class="mainBody">
+    <MyInput
+      LabelInput="Full Name *"
+      Placeholder="Foo Bar"
+      idInputs="fullName"
+      idSpan="fullNameError"
+      InvalidSpan="Please enter your name"
+    />
 
-    <MyInput LabelInput="Full Name *"
-    Placeholder="Foo Bar"
-    idInputs="fullName"
-    idSpan="fullNameError"
-    InvalidSpan="Please enter your name"/>
-
-    <MyInput LabelInput="Nickname"
-    Placeholder="Juanito"/>
+    <MyInput LabelInput="Nickname" Placeholder="Juanito" />
 
     <div class="emailPhoneBody">
+      <MyInput
+        ClassDiv="emailDiv"
+        LabelInput="Email *"
+        Placeholder="foo@bar.com"
+        idSpan="emailError"
+        InvalidSpan="Please enter your Email"
+        idInputs="emailInput"
+      />
 
-      <MyInput ClassDiv="emailDiv"
-      LabelInput="Email *"
-      Placeholder="foo@bar.com"
-      idSpan="emailError"
-      InvalidSpan="Please enter your Email"
-      idInputs="emailInput"/>
-
-      <MyInput ClassDiv="phoneDiv"
-      LabelInput="Phone"
-      Placeholder="(83) 00000-0000"
-      idInputs="phoneInput"/>
-
+      <MyInput
+        ClassDiv="phoneDiv"
+        LabelInput="Phone"
+        Placeholder="(83) 00000-0000"
+        idInputs="phoneInput"
+      />
     </div>
 
     <div class="basicBirthday">
-        <MyBirthday />
+      <MyBirthday />
     </div>
 
     <div class="basicFooter">
-          <MyCheckbox
-          checkboxid="checkbox"
-          content="I accept the terms and privacy"
-          class="chkx"/>
+      <MyCheckbox
+        checkboxid="checkbox"
+        content="I accept the terms and privacy"
+        class="chkx"
+      />
 
       <div class="containerButton" @click="next">
-          <MyButton text="Next >" classButton="Button ButtonNext" />
+        <MyButton text="Next >" classButton="Button ButtonNext" />
       </div>
     </div>
   </div>
 </template>
 
 <script>
-
 import MyCheckbox from '../../Micro/MyCheckbox/MyCheckbox'
 import MyButton from '../../Micro/MyButton/MyButton'
 import MyBirthday from '../../Container/MyBirthday/MyBirthday'
@@ -71,14 +73,22 @@ export default {
       const birthdayError = document.getElementById('birthdayError')
       const checkboxError = document.getElementById('footerError')
       this.isOK = true
-      if (!(/^[a-zA-Z\u00C0-\u017F´]+\s+[a-zA-Z\u00C0-\u017F´]{0,}$/.test(this.$store.state.fullname))) {
+      if (
+        !/^[a-zA-Z\u00C0-\u017F´]+\s+[a-zA-Z\u00C0-\u017F´]{0,}$/.test(
+          this.$store.state.fullname
+        )
+      ) {
         nameError.style.visibility = 'visible'
         this.isOK = false
       } else {
         nameError.style.visibility = 'hidden'
       }
 
-      if (!(/^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$/.test(this.$store.state.email))) {
+      if (
+        !/^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$/.test(
+          this.$store.state.email
+        )
+      ) {
         emailError.style.visibility = 'visible'
         this.isOK = false
       } else {
@@ -105,12 +115,11 @@ export default {
       }
     }
   }
-
 }
 </script>
 
 <style lang="scss" scooped>
-@import "./MyBasic.scss";
+@import './MyBasic.scss';
 
 .mainBody {
   width: 84%;
@@ -132,7 +141,5 @@ export default {
   .basicFooter {
     margin: 20px 0 0;
   }
-
 }
-
 </style>

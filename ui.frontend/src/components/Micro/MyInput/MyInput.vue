@@ -7,7 +7,6 @@
       :class="ClassInput"
       :placeholder="Placeholder"
       :id="idInputs"
-      @input="getValue"
       :value="valueInput"
     />
   </div>
@@ -16,6 +15,7 @@
 <script>
 import { mapActions } from 'vuex'
 
+// @input="getValue"
 export default {
   name: 'MyInputs',
   props: {
@@ -112,15 +112,15 @@ label {
   margin-right: 2em;
 
     .inter-label {
-    font-family: "Inter", sans-serif;
+    //font-family: "Inter", sans-serif;
     }
 
     .nunito-label {
-    font-family: 'Nunito', sans-serif;
+    //font-family: 'Nunito', sans-serif;
     }
 
     .space-mono-label{
-    font-family: "Space Mono", monospace;
+    //font-family: "Space Mono", monospace;
     }
 
   @media (max-width: 450px){
@@ -133,13 +133,13 @@ span {
   font-size: 1em;
   visibility: hidden;
     .inter-span {
-    font-family: "Inter", sans-serif;
+    //font-family: "Inter", sans-serif;
     }
     .nunito-span {
-    font-family: 'Nunito', sans-serif;
+    //font-family: 'Nunito', sans-serif;
     }
     .space-mono-span {
-    font-family: "Space Mono", monospace;
+    //font-family: "Space Mono", monospace;
     }
   @media (max-width: 450px){
     font-size: 0.75em;
@@ -151,7 +151,7 @@ input {
   border: 2px solid #aaaaaa;
   border-radius: 4px;
   width: 100%;
-  height: 2.5em;
+  height: 2em;
   background: transparent;
   color: #767676;
   font-size: 1em;
@@ -159,13 +159,13 @@ input {
   margin-top: 5px;
   box-sizing: border-box;
     .inter-input {
-    font-family: "Inter", sans-serif;
+    //font-family: "Inter", sans-serif;
     }
     .nunito-input {
-    font-family: 'Nunito', sans-serif;
+    //font-family: 'Nunito', sans-serif;
     }
     .space-mono-input {
-    font-family: "Space Mono", monospace;
+    //font-family: "Space Mono", monospace;
     }
   &:focus {
     outline: 0;
