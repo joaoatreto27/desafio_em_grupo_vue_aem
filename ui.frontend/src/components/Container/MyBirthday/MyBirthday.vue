@@ -67,6 +67,7 @@
 
 <script>
 import MyText from '../../Micro/MyText/MyText'
+import { mapActions } from 'vuex'
 
 export default {
   name: 'MyBirthday',
@@ -84,7 +85,8 @@ export default {
   },
   props: {
     idSpan: {
-      type: String
+      type: String,
+      default: 'birthdayError'
     },
     ClassSpan: {
       type: String
@@ -100,6 +102,9 @@ export default {
   },
 
   methods: {
+
+    ...mapActions(['setAge']),
+
     setDay (e) {
       this.day = e.target.value
       this.control[0] = true
@@ -129,12 +134,12 @@ export default {
       const actualMonth = date.getMonth() + 1
       const actualDay = date.getDay()
 
-      if ((actualMonth < this.month ||
-            (actualMonth === this.month && actualDay < this.day)) && this.age > 0) {
+      if ((actualMonth < this.month || (actualMonth === this.month && actualDay < this.day)) && this.age > 0) {
         ageUser--
       }
 
       this.age = ageUser
+      this.setAge(this.age)
     }
   }
 }
@@ -142,6 +147,10 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+
+#birthdayError {
+  visibility: hidden;
+}
 
 .birthdayTitle {
   display: flex;

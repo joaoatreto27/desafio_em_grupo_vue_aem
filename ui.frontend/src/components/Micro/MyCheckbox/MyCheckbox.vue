@@ -17,11 +17,15 @@
 export default {
   name: 'MyCheckbox',
   props: {
+    checkboxid: {
+      type: String
+    },
     content: {
       type: String
     },
     idSpan: {
-      type: String
+      type: String,
+      default: 'footerError'
     },
     ClassSpan: {
       type: String
@@ -42,6 +46,10 @@ export default {
 <style lang="scss" scoped>
 
 @import url('https://fonts.googleapis.com/css2?family=Nunito&display=swap');
+
+#footerError {
+  visibility: hidden;
+}
 
 .checkbox {
     display: flex;

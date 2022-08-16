@@ -3,6 +3,8 @@
 
     <MyInput LabelInput="Full Name *"
     Placeholder="Foo Bar"
+    idInputs="fullName"
+    idSpan="fullNameError"
     InvalidSpan="Please enter your name"/>
 
     <MyInput LabelInput="Nickname"
@@ -13,6 +15,7 @@
       <MyInput ClassDiv="emailDiv"
       LabelInput="Email *"
       Placeholder="foo@bar.com"
+      idSpan="emailError"
       InvalidSpan="Please enter your Email"
       idInputs="emailInput"/>
 
@@ -34,7 +37,7 @@
           class="chkx"/>
 
       <div class="containerButton" @click="next">
-          <MyButton text="Next" classButton="Button ButtonNext" />
+          <MyButton text="Next >" classButton="Button ButtonNext" />
       </div>
     </div>
   </div>
@@ -56,9 +59,50 @@ export default {
     MyButton,
     MyInput
   },
+  data () {
+    return {
+      isOK: undefined
+    }
+  },
   methods: {
     next () {
-      this.$store.state.tab = 'social'
+      const nameError = document.getElementById('fullNameError')
+      const emailError = document.getElementById('emailError')
+      const birthdayError = document.getElementById('birthdayError')
+      const checkboxError = document.getElementById('footerError')
+      this.isOK = true
+      if (!(/^[a-zA-Z\u00C0-\u017F´]+\s+[a-zA-Z\u00C0-\u017F´]{0,}$/.test(this.$store.state.fullname))) {
+        nameError.style.visibility = 'visible'
+        this.isOK = false
+      } else {
+        nameError.style.visibility = 'hidden'
+      }
+
+      if (!(/^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$/.test(this.$store.state.email))) {
+        emailError.style.visibility = 'visible'
+        this.isOK = false
+      } else {
+        emailError.style.visibility = 'hidden'
+      }
+
+      if (this.$store.state.age === '') {
+        birthdayError.style.visibility = 'visible'
+        this.isOK = false
+      } else {
+        birthdayError.style.visibility = 'hidden'
+      }
+
+      const checkbox = document.getElementById('checkbox')
+      if (!checkbox.checked) {
+        checkboxError.style.visibility = 'visible'
+        this.isOK = false
+      } else {
+        checkboxError.style.visibility = 'hidden'
+      }
+
+      if (this.isOK) {
+        this.$store.state.tab = 'social'
+      }
     }
   }
 

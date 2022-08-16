@@ -14,6 +14,8 @@
 </template>
 
 <script>
+import { mapActions } from 'vuex'
+
 export default {
   name: 'MyInputs',
   props: {
@@ -68,6 +70,22 @@ export default {
     ClassDiv: {
       type: String,
       default: 'fullDiv'
+    }
+  },
+
+  methods: {
+
+    ...mapActions(['setFullName', 'setEmail']),
+
+    getValue (e) {
+      switch (this.idInputs) {
+        case 'fullName':
+          this.setFullName(e.target.value)
+          break
+        case 'emailInput':
+          this.setEmail(e.target.value)
+          break
+      }
     }
   }
 }
