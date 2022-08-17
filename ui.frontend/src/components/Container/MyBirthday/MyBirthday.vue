@@ -5,8 +5,8 @@
 
           <MyText
           textID="birthdayText"
-          className="nunito"
-          msg="Birthday *"/>
+          msg="Birthday *"
+          color="#767676"/>
 
           <span :id="idSpan"
           :class="ClassSpan"
@@ -18,7 +18,8 @@
         <div class="birthdayBody">
             <div class="birthdayDay">
                 <MyText
-                className="nunito"
+                className="nunito birthdayTitles"
+                color="#767676"
                 msg="Day"/>
                 <select name="day" class="birthdaySelect" @change="setDay">
                     <option disabled>Day</option>
@@ -30,7 +31,8 @@
             </div>
             <div class="birthdayMonth">
                 <MyText
-                className="nunito"
+                className="nunito birthdayTitles"
+                color="#767676"
                 msg="Month"/>
                 <select name="month" class="birthdaySelect" @change="setMonth">
                     <option disabled>Month</option>
@@ -42,19 +44,21 @@
             </div>
             <div class="birthdayYear">
                 <MyText
-                className="nunito"
+                className="nunito birthdayTitles"
+                color="#767676"
                 msg="Year"/>
                 <select name="year" class="birthdaySelect" @change="setYear">
                     <option disabled>Year</option>
                     <option style="display:none">1901</option>
-                    <option id="optionYear" class="birthdayOption" v-for="year in 2022" :key="year">
-                        {{ year }}
+                    <option id="optionYear" class="birthdayOption" v-for="year in this.yearsR" :key="year">
+                        {{ year + 1900 }}
                     </option>
                 </select>
             </div>
             <div class="birthdayAge">
                 <MyText
-                className="nunito"
+                className="nunito birthdayTitles"
+                color="#767676"
                 msg="Age"/>
                 <div class="age">
                     {{ age }}
@@ -80,6 +84,7 @@ export default {
       month: '',
       year: '',
       age: 0,
+      yearsR: '',
       control: [false, false, false]
     }
   },
@@ -140,7 +145,14 @@ export default {
 
       this.age = ageUser
       this.setAge(this.age)
+    },
+    vYear () {
+      const birthday = new Date()
+      this.yearsR = birthday.getFullYear() - 1900
     }
+  },
+  created () {
+    this.vYear()
   }
 }
 
@@ -150,6 +162,11 @@ export default {
 
 #birthdayError {
   visibility: hidden;
+  margin-left: 20px;
+}
+
+.birthdayDay {
+  font-size: 1em;
 }
 
 .birthdayTitle {
@@ -160,6 +177,7 @@ export default {
 .birthdayBody {
     display: flex;
     justify-content: space-between;
+    margin-top: 20px;
 }
 
 .age {
@@ -167,14 +185,18 @@ export default {
     display: flex;
     width: 110px;
     height: 40px;
-    background: #FFFFFF;
+    padding: 5px;
     border: 2px solid #AAAAAA;
     border-radius: 4px;
-    align-items: center;
 
     p {
         margin: 0;
     }
+}
+
+.birthdayAge {
+  width: 110px;
+  height: 40px;
 }
 
 .birthdaySelect {
