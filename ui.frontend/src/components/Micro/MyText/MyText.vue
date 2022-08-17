@@ -1,6 +1,6 @@
 <template>
-  <div :id="textID">
-    <p :class="className" :style="{ 'color' : color}">{{ msg }}</p>
+  <div>
+    <p :class="className" :id="textID" :style="{ 'color' : color}">{{ msg }}</p>
   </div>
 </template>
 
@@ -28,25 +28,30 @@ export default {
 }
 </script>
 
-<style lang="scss" scooped>
+<style lang="scss" scoped>
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@200&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@1,200&display=swap');
 @import url("https://fonts.googleapis.com/css2?family=Space+Mono&display=swap");
 
 p {
   font-weight: 400;
-  font-size: 1.2em;
+  font-size: 1em;
   width: 100%;
   color: #767676;
 
   @media (max-width: 768px) {
-    font-size: 1.1em;
+    font-size: 1em;
   }
 
 }
 
 #birthdayText {
-  margin: 0 20px 0 0;
+  color: #767676;
+  font-size: 1em;
+}
+
+.birthdayTitles {
+  font-size: 1em;
 }
 
 .inter {

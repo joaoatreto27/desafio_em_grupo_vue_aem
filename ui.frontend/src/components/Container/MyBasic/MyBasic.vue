@@ -118,7 +118,7 @@ export default {
 }
 </script>
 
-<style lang="scss" scooped>
+<style lang="scss" scoped>
 @import './MyBasic.scss';
 
 .mainBody {
@@ -126,9 +126,18 @@ export default {
   display: flex;
   flex-flow: column wrap;
 
+  input {
+    height: 40px;
+  }
+
   .emailPhoneBody {
     display: flex;
     justify-content: space-between;
+    margin: 20px 0 0 0;
+  }
+
+  .birthdayBody {
+    margin-top: 20px;
   }
 
   div {

@@ -80,7 +80,6 @@ export default {
     getValue (e) {
       switch (this.idInputs) {
         case 'fullName':
-          console.log(e.target.value)
           this.setFullName(e.target.value)
           break
         case 'emailInput':
@@ -98,6 +97,8 @@ export default {
 
 .fullDiv {
   width: 100%;
+  margin: 20px 0 0 0;
+
 }
 
 .emailDiv {
@@ -152,7 +153,7 @@ input {
   border: 2px solid #aaaaaa;
   border-radius: 4px;
   width: 100%;
-  height: 2em;
+  height: 40px;
   background: transparent;
   color: #767676;
   font-size: 1em;
