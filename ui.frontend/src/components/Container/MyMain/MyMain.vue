@@ -47,13 +47,17 @@ export default {
     },
     fieldFacebook: {
       type: Boolean,
-      default: true
+      default: false
     },
     fieldInstagram: {
       type: Boolean,
       default: true
     },
     fieldTwitter: {
+      type: Boolean,
+      default: true
+    },
+    fieldPersonalizada: {
       type: Boolean,
       default: true
     },
@@ -76,6 +80,18 @@ export default {
     successTwitter: {
       type: Boolean,
       default: false
+    },
+    successPersonalizada: {
+      type: Boolean,
+      default: true
+    },
+    labelPersonalizada: {
+      type: String,
+      default: 'Personalizada'
+    },
+    placeholderPersonalizada: {
+      type: String,
+      default: 'https://www.foobar.com'
     }
   },
   methods: {
@@ -85,11 +101,15 @@ export default {
       this.$store.state.fieldFacebook = this.fieldFacebook
       this.$store.state.fieldInstagram = this.fieldInstagram
       this.$store.state.fieldTwitter = this.fieldTwitter
+      this.$store.state.fieldPersonalizada = this.fieldPersonalizada
       this.$store.state.successLinkedin = this.successLinkedin
       this.$store.state.successGithub = this.successGithub
       this.$store.state.successFacebook = this.successFacebook
       this.$store.state.successInstagram = this.successInstagram
       this.$store.state.successTwitter = this.successTwitter
+      this.$store.state.successPersonalizada = this.successPersonalizada
+      this.$store.state.labelPersonalizade = this.labelPersonalizada
+      this.$store.state.placeholderPersonalizada = this.placeholderPersonalizada
     }
   },
   mounted () {

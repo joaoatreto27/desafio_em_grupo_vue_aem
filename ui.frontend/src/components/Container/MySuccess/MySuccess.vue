@@ -9,7 +9,7 @@
     <p class="text" v-if="this.$store.state.fieldInstagram == true && this.$store.state.successInstagram == true">Instagram: {{ instagram }} </p>
     <p class="text" v-if="this.$store.state.fieldFacebook == true && this.$store.state.successFacebook == true">Facebook: {{ facebook }}</p>
     <p class="text" v-if="this.$store.state.fieldTwitter == true && this.$store.state.successTwitter == true">Twitter: {{ twitter }}</p>
-    <p class="text" v-if="this.$store.state.fieldPersonalizada == true && this.$store.state.successPersonalizada == true"> {{ fieldPersonalizada }}: {{ personalizada }}</p>
+    <p class="text" v-if="this.$store.state.fieldPersonalizada == true && this.$store.state.successPersonalizada == true"> {{ personalizada }}: {{ personalizada }}</p>
     <p class="text">Certificates: {{ certificates }}</p>
     <p class="text">Team Name: {{ teamname }}</p>
     <p class="text">Institution: {{ institution }}</p>
@@ -46,6 +46,7 @@ export default {
       facebook: this.$store.state.facebook,
       twitter: this.$store.state.twitter,
       fieldPersonalizada: this.$store.state.fieldPersonalizada,
+      personalizada: this.$store.state.personalizada,
       certificates: this.$store.state.certificates,
       teamname: this.$store.state.teamname,
       institution: this.$store.state.institution,
