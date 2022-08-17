@@ -1,10 +1,19 @@
 <template>
 
     <div class="birthday">
+        <div class="birthdayTitle">
 
-        <MyText
-        className="nunito"
-        msg="Birthday *"/>
+          <MyText
+          textID="birthdayText"
+          className="nunito"
+          msg="Birthday *"/>
+
+          <span :id="idSpan"
+          :class="ClassSpan"
+          :style="{ 'color' : SpanColor}">
+          {{ InvalidSpan }}</span>
+
+        </div>
 
         <div class="birthdayBody">
             <div class="birthdayDay">
@@ -48,7 +57,7 @@
                 className="nunito"
                 msg="Age"/>
                 <div class="age">
-                    <p>{{ age }}</p>
+                    {{ age }}
                 </div>
             </div>
         </div>
@@ -58,6 +67,7 @@
 
 <script>
 import MyText from '../../Micro/MyText/MyText'
+import { mapActions } from 'vuex'
 
 export default {
   name: 'MyBirthday',
@@ -73,8 +83,28 @@ export default {
       control: [false, false, false]
     }
   },
+  props: {
+    idSpan: {
+      type: String,
+      default: 'birthdayError'
+    },
+    ClassSpan: {
+      type: String
+    },
+    SpanColor: {
+      type: String,
+      default: '#ff0000'
+    },
+    InvalidSpan: {
+      type: String,
+      default: 'Please enter your Age'
+    }
+  },
 
   methods: {
+
+    ...mapActions(['setAge']),
+
     setDay (e) {
       this.day = e.target.value
       this.control[0] = true
@@ -104,12 +134,12 @@ export default {
       const actualMonth = date.getMonth() + 1
       const actualDay = date.getDay()
 
-      if ((actualMonth < this.month ||
-            (actualMonth === this.month && actualDay < this.day)) && this.age > 0) {
+      if ((actualMonth < this.month || (actualMonth === this.month && actualDay < this.day)) && this.age > 0) {
         ageUser--
       }
 
       this.age = ageUser
+      this.setAge(this.age)
     }
   }
 }
@@ -117,6 +147,16 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+
+#birthdayError {
+  visibility: hidden;
+}
+
+.birthdayTitle {
+  display: flex;
+
+}
+
 .birthdayBody {
     display: flex;
     justify-content: space-between;
@@ -130,6 +170,8 @@ export default {
     background: #FFFFFF;
     border: 2px solid #AAAAAA;
     border-radius: 4px;
+    align-items: center;
+
     p {
         margin: 0;
     }
@@ -142,7 +184,6 @@ export default {
     background: #FFFFFF;
     border: 2px solid #AAAAAA;
     border-radius: 4px;
-    flex-grow: 0;
 
     .birthdayOption {
         font-weight: 400;

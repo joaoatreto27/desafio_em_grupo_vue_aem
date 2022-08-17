@@ -43,11 +43,34 @@ const store = new Store({
   mutations: {
     setTab (state, tab) {
       state.tab = tab
+    },
+
+    setFullName (state, fullname) {
+      state.fullname = fullname
+    },
+
+    setEmail (state, email) {
+      state.email = email
+    },
+
+    setAge (state, age) {
+      state.age = age
     }
   },
   actions: {
     setTab ({ commit }, tab) {
       commit('setTab', tab)
+    },
+    setFullName ({ commit }, fullname) {
+      commit('setFullName', fullname)
+    },
+
+    setEmail ({ commit }, email) {
+      commit('setEmail', email)
+    },
+
+    setAge ({ commit }, age) {
+      commit('setAge', age)
     }
   },
   modules: {}

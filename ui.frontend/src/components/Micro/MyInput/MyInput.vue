@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div :class="ClassDiv">
     <label :class="ClassLabel" :style="{ 'color' : LabelColor}">{{ LabelInput }} </label>
     <span :id="idSpan" :class="ClassSpan" :style="{ 'color' : SpanColor}">{{ InvalidSpan }}</span>
     <input
@@ -12,7 +12,10 @@
   </div>
 </template>
 
-<script>// @input="getValue"
+<script>
+import { mapActions } from 'vuex'
+
+// @input="getValue"
 export default {
   name: 'MyInputs',
   props: {
@@ -63,6 +66,26 @@ export default {
     LabelColor: {
       type: String,
       default: '#767676'
+    },
+    ClassDiv: {
+      type: String,
+      default: 'fullDiv'
+    }
+  },
+
+  methods: {
+
+    ...mapActions(['setFullName', 'setEmail']),
+
+    getValue (e) {
+      switch (this.idInputs) {
+        case 'fullName':
+          this.setFullName(e.target.value)
+          break
+        case 'emailInput':
+          this.setEmail(e.target.value)
+          break
+      }
     }
   }
 }
@@ -72,8 +95,20 @@ export default {
 @import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@1,200&display=swap');
 @import url("https://fonts.googleapis.com/css2?family=Space+Mono&display=swap");
 
+.fullDiv {
+  width: 100%;
+}
+
+.emailDiv {
+  width: 51%;
+}
+
+.phoneDiv {
+  width: 30%;
+}
+
 label {
-  font-size: 1.2em;
+  font-size: 1em;
   margin-right: 2em;
 
     .inter-label {
@@ -122,6 +157,7 @@ input {
   font-size: 1em;
   padding-left: 10px;
   margin-top: 5px;
+  box-sizing: border-box;
     .inter-input {
     //font-family: "Inter", sans-serif;
     }

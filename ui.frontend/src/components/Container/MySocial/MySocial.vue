@@ -16,7 +16,7 @@
 
 <script>
 import MyButton from '../../Micro/MyButton/MyButton.vue'
-import MyInput from '../../MyInput/MyInput.vue'
+import MyInput from '../../Micro/MyInput/MyInput.vue'
 export default {
   // eslint-disable-next-line
   name: 'MySocial',

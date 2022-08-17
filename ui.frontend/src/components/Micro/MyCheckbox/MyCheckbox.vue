@@ -4,6 +4,11 @@
         :name="checkboxname"
         :id="checkboxid">
         <label :for="checkboxid">{{ content }}</label>
+
+        <span :id="idSpan"
+        :class="ClassSpan"
+        :style="{ 'color' : SpanColor}">
+        {{ InvalidSpan }}</span>
     </div>
 </template>
 
@@ -12,8 +17,26 @@
 export default {
   name: 'MyCheckbox',
   props: {
+    checkboxid: {
+      type: String
+    },
     content: {
       type: String
+    },
+    idSpan: {
+      type: String,
+      default: 'footerError'
+    },
+    ClassSpan: {
+      type: String
+    },
+    SpanColor: {
+      type: String,
+      default: '#ff0000'
+    },
+    InvalidSpan: {
+      type: String,
+      default: 'Please confirm the terms'
     }
   }
 }
@@ -23,6 +46,10 @@ export default {
 <style lang="scss" scoped>
 
 @import url('https://fonts.googleapis.com/css2?family=Nunito&display=swap');
+
+#footerError {
+  visibility: hidden;
+}
 
 .checkbox {
     display: flex;
@@ -42,6 +69,7 @@ export default {
         font-weight: 400;
         font-size: 16px;
         color: #111111;
+        margin-right: 2em;
     }
 }
 
