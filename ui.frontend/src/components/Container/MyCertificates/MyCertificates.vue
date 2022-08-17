@@ -1,7 +1,7 @@
 <template>
   <div class="certificate-container">
     <MyInput
-      ClassDiv="inputCertificates"
+      ClassDiv="fullDiv"
       LabelInput="Certificates"
       ClassInput="Certificates"
       Placeholder="https://www.linkedin.com/in/foo-bar-3a0560104/"
@@ -10,16 +10,18 @@
     />
     <div class="buttons">
         <MyButton
+          type="3"
           text="Certificate"
           classButton="certificateButton"
         ></MyButton>
         <MyButton
+          type="2"
           text="More"
           classButton="moreButton"
         ></MyButton>
     </div>
     <MyInput
-      ClassDiv="inputTeam"
+      ClassDiv="fullDiv"
       LabelInput="TeamName *"
       idSpan="teamSpan"
       ClassInput="Team"
@@ -29,7 +31,7 @@
       :valueInput="teamnameValue"
     />
     <MyInput
-      ClassDiv="inputInstitution"
+      ClassDiv="fullDiv"
       LabelInput="Institution *"
       idSpan="institutionSpan"
       ClassInput="Institution"
@@ -39,7 +41,7 @@
       :valueInput="institutionValue"
     />
     <MyInput
-      ClassDiv="inputGraduation"
+      ClassDiv="fullDiv"
       LabelInput="Graduation *"
       idSpan="graduationSpan"
       ClassInput="Graduation"
@@ -49,7 +51,7 @@
       :valueInput="graduationValue"
     />
     <div class="containerButton" @click="next">
-        <MyButton text="Finish" classButton="Button ButtonNext" />
+        <MyButton text="Finish" classButton="Button" type="1" />
     </div>
   </div>
 </template>

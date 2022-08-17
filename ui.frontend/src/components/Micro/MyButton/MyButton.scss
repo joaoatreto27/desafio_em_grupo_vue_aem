@@ -1,66 +1,44 @@
-.containerButton {
-    position: relative;
+.classButton {
+  cursor: pointer;
+  padding: 10px;
+  background: #074ee8;
+  border-radius: 4px;
+  border: none;
+  font-size: 1em;
+  height: 2.5em;
 
-  .Button:hover {
-    cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff;
+  gap: 5px;
+}
+
+#button3 {
+  width: 100%;
+  font-size: 1em;
+  padding: 5px 5px;
+  visibility: hidden;
+  @media(max-width:768px){
+    width: 100%;
   }
+}
+.img0 {
+  width: 7px;
+  height: 10px;
+}
 
-  .Button {
-    margin-left: 10px;
-    width: 90px;
-    height: 40px;
-    background: #074ee8;
-    color: white;
-    border: none;
-    background-position-y: 50%;
-    border-radius: 4px;
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 18px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
+.img1 {
+  width: 13px;
+  height: 10px;
+}
 
-  .ButtonNext {
-    background-image: url(("/../assets/Vector.png"));
-    
-    background-repeat: no-repeat;
-    background-size: 8px;
-    background-position-x: calc(70%);
-    padding: 0px 24px 0px 0px;
-  }
+.img2 {
+  width: 10px;
+  height: 10px;
+}
 
-  .ButtonFinish {
-    background-image: url("/../assets/VectorFinish.png");
-    background-repeat: no-repeat;
-    background-size: 14px;
-    background-position-x: calc(20%);
-    padding: 0px 0px 0px 16px;
-  }
-
-  .ButtonReturn {
-    background-image: url("/../assets/VectorFinish.png");
-    background-repeat: no-repeat;
-    background-size: 14px;
-    background-position-x: calc(20%);
-    padding: 0px 0px 0px 16px;
-  }
-
-  .ButtonMore {
-    background-image: url("/../assets/VectorMore.png");
-    background-repeat: no-repeat;
-    background-size: 16px;
-    background-position-x: calc(10%);
-    padding: 0px 0px 0px 0px;
-  }
-
-  .ButtonCertificates {
-    background-image: url("/../assets/VectorCertificate.png");
-    background-repeat: no-repeat;
-    background-size: 16px;
-    background-position-x: calc(20%);
-    padding: 0px 0px 0px 0px;
-  }
-
+.img3 {
+  width: 13px;
+  height: 10px;
 }

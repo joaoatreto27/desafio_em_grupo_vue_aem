@@ -15,7 +15,6 @@
 <script>
 import { mapActions } from 'vuex'
 
-// @input="getValue"
 export default {
   name: 'MyInputs',
   props: {
