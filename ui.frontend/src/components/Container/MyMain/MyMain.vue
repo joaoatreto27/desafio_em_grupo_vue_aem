@@ -47,7 +47,7 @@ export default {
     },
     fieldFacebook: {
       type: Boolean,
-      default: false
+      default: true
     },
     fieldInstagram: {
       type: Boolean,
@@ -63,7 +63,7 @@ export default {
     },
     successLinkedin: {
       type: Boolean,
-      default: false
+      default: true
     },
     successGithub: {
       type: Boolean,
@@ -71,15 +71,15 @@ export default {
     },
     successFacebook: {
       type: Boolean,
-      default: false
+      default: true
     },
     successInstagram: {
       type: Boolean,
-      default: false
+      default: true
     },
     successTwitter: {
       type: Boolean,
-      default: false
+      default: true
     },
     successPersonalizada: {
       type: Boolean,

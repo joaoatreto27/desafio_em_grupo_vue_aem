@@ -5,6 +5,7 @@
     <p class="text">Email: {{ email }}</p>
     <p class="text">Birthday: {{ day }}/{{ month }}/{{ year }}</p>
     <p class="text">Age: {{ age }}</p>
+    <p class="text" v-if="this.$store.state.fieldLinkedin == true && this.$store.state.successLinkedin == true">Linkedin: {{ linkedin }}</p>
     <p class="text" v-if="this.$store.state.fieldGithub == true && this.$store.state.successGithub == true">GitHub: {{ github }}</p>
     <p class="text" v-if="this.$store.state.fieldInstagram == true && this.$store.state.successInstagram == true">Instagram: {{ instagram }} </p>
     <p class="text" v-if="this.$store.state.fieldFacebook == true && this.$store.state.successFacebook == true">Facebook: {{ facebook }}</p>
@@ -41,6 +42,7 @@ export default {
       month: this.$store.state.month,
       year: this.$store.state.year,
       age: this.$store.state.age,
+      linkedin: this.$store.state.linkedin,
       github: this.$store.state.github,
       instagram: this.$store.state.instagram,
       facebook: this.$store.state.facebook,

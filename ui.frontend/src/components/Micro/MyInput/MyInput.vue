@@ -75,7 +75,7 @@ export default {
 
   methods: {
 
-    ...mapActions(['setFullName', 'setEmail']),
+    ...mapActions(['setFullName', 'setNickName', 'setEmail', 'setPhone', 'setDay', 'setMonth', 'setYear', 'setLinkedin', 'setGithub', 'setFacebook', 'setInstagram', 'setTwitter', 'setPersonalizada']),
 
     getValue (e) {
       switch (this.idInputs) {
@@ -83,8 +83,32 @@ export default {
           console.log(e.target.value)
           this.setFullName(e.target.value)
           break
+        case 'nickName':
+          this.setNickName(e.target.value)
+          break
         case 'emailInput':
           this.setEmail(e.target.value)
+          break
+        case 'phoneInput':
+          this.setPhone(e.target.value)
+          break
+        case 'linkedin':
+          this.setLinkedin(e.target.value)
+          break
+        case 'instagram':
+          this.setInstagram(e.target.value)
+          break
+        case 'twitter':
+          this.setTwitter(e.target.value)
+          break
+        case 'personalizada':
+          this.setPersonalizada(e.target.value)
+          break
+        case 'facebook':
+          this.setFacebook(e.target.value)
+          break
+        case 'github':
+          this.setGithub(e.target.value)
           break
       }
     }
