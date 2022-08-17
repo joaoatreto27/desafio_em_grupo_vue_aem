@@ -8,6 +8,7 @@
       :placeholder="Placeholder"
       :id="idInputs"
       :value="valueInput"
+      @input="getValue"
     />
   </div>
 </template>
@@ -15,7 +16,6 @@
 <script>
 import { mapActions } from 'vuex'
 
-// @input="getValue"
 export default {
   name: 'MyInputs',
   props: {
@@ -80,6 +80,7 @@ export default {
     getValue (e) {
       switch (this.idInputs) {
         case 'fullName':
+          console.log(e.target.value)
           this.setFullName(e.target.value)
           break
         case 'emailInput':
