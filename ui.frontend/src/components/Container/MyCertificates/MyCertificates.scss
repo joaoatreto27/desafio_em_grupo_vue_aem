@@ -1,0 +1,62 @@
+* {
+    font-family: "Nunito", sans-serif;
+  }
+  
+  .certificate-container {
+    margin-top: 1em;
+    position: relative;
+  
+    span {
+      font-size: 0.9em;
+      color: #ff0000;
+      visibility: visible;
+      @media (max-width: 580px) {
+        font-size: 0.75em;
+      }
+    }
+  
+    .buttons {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: flex-start;
+      margin-bottom: 1.5em;
+      margin-top: 10px;
+  
+        .certificateButton{
+            width: 100%;
+            font-size: 1em;
+            padding: 5px 5px;
+            visibility: hidden;
+            background-color: black;
+            @media(max-width:768px){
+                width: 100%;
+            }
+        }
+      }
+    }
+  
+  .inputCertificates,
+  .inputTeam,
+  .inputInstitution,
+  .inputGraduation {
+    margin-top: 1em;
+  }
+
+  .Certificates,
+  .Team,
+  .Institution,
+  .Graduation {
+    height: 2.5em;
+  }
+
+  span {
+    font-size: 0.9em;
+    color: #ff0000;
+    visibility: visible;
+    @media (max-width: 580px) {
+      font-size: 0.75em;
+    }
+  }
+  
+  
