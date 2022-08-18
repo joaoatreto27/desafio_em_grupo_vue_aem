@@ -15,7 +15,7 @@
       id="button1"
       @click.prevent="event"
     >
-    {{ text }} <img class="img1" src="@/assets/VectorFinish.png" alt="Finish"/>
+    <img class="img1" src="@/assets/VectorFinish.png" alt="Finish"/>{{ text }}
     </button>
     <button
       class="classButton"

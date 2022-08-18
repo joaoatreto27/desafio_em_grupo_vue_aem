@@ -130,6 +130,7 @@ const store = new Store({
     },
     setGraduation (state, graduation) {
       state.graduation = graduation
+
     }
 
   },
