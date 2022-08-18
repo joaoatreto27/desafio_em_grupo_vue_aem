@@ -6,7 +6,8 @@
       ClassInput="Certificates"
       Placeholder="https://www.linkedin.com/in/foo-bar-3a0560104/"
       Type="text"
-      :valueInput="certificatesValue"
+      :valueInput="valueCertificates"
+      v-if="this.$store.state.fieldCertificates == true"
     />
     <div class="buttons">
         <MyButton
@@ -23,32 +24,35 @@
     <MyInput
       ClassDiv="fullDiv"
       LabelInput="TeamName *"
-      idSpan="teamSpan"
+      idSpan="teamnameError"
       ClassInput="Team"
       InvalidSpan="Please enter your Team Name"
       Placeholder="https://www.linkedin.com/in/foo-bar-3a0560104/"
       Type="text"
-      :valueInput="teamnameValue"
+      :valueInput="valueTeamName"
+      v-if="this.$store.state.fieldTeamName == true"
     />
     <MyInput
       ClassDiv="fullDiv"
       LabelInput="Institution *"
-      idSpan="institutionSpan"
+      idSpan="institutionError"
       ClassInput="Institution"
       InvalidSpan="Please enter your Institution"
       Placeholder="Universidade Federal da Paraíba"
       Type="text"
-      :valueInput="institutionValue"
+      :valueInput="valueInstitution"
+      v-if="this.$store.state.fieldInstitution == true"
     />
     <MyInput
       ClassDiv="fullDiv"
       LabelInput="Graduation *"
-      idSpan="graduationSpan"
+      idSpan="graduationError"
       ClassInput="Graduation"
       InvalidSpan="Please enter your Graduation"
       Placeholder="Ciências da Computação"
       Type="text"
-      :valueInput="graduationValue"
+      :valueInput="valueGraduation"
+      v-if="this.$store.state.fieldGraduation == true"
     />
     <div class="containerButton" @click="next">
         <MyButton text="Finish" classButton="Button" type="1" />
@@ -67,9 +71,61 @@ export default {
     MyButton,
     MyInput
   },
+  data () {
+    return {
+      valueCertificates: '',
+      valueTeamName: '',
+      valueInstitution: '',
+      valueGraduation: ''
+    }
+  },
   methods: {
     next () {
+      const teamnameError = document.getElementById('teamnameError')
+      const institutionError = document.getElementById('institutionError')
+      const graduationError = document.getElementById('graduationError')
+      this.isOK = false
+      if ( // eslint-disable-next-line no-useless-escape
+        /^https?:\/\/(?:www\.)?[-a-zA-Z0-9@:%._\+~#=]{1,256}\.[a-zA-Z0-9()]{1,6}\b(?:[-a-zA-Z0-9()@:%_\+.~#?&\/=]*)$/.test(
+          this.$store.state.teamname
+        )
+      ) {
+        teamnameError.style.visibility = 'hidden'
+        this.isOK = true
+      } else {
+        teamnameError.style.visibility = 'visible'
+        this.isOK = false
+      }
+
+      if ( // eslint-disable-next-line no-useless-escape
+        this.$store.state.graduation
+      ) {
+        graduationError.style.visibility = 'hidden'
+        this.isOK = true
+      } else {
+        graduationError.style.visibility = 'visible'
+        this.isOK = false
+      }
+
+      if ( // eslint-disable-next-line no-useless-escape
+        this.$store.state.institution
+      ) {
+        institutionError.style.visibility = 'hidden'
+        this.isOK = true
+      } else {
+        institutionError.style.visibility = 'visible'
+        this.isOK = false
+      }
+      if (this.isOK) {
+
+      }
       this.$store.state.tab = 'success'
+    },
+    getData () {
+      this.valueCertificates = this.$store.state.certificates
+      this.valueTeamName = this.$store.state.teamname
+      this.valueInstitution = this.$store.state.institution
+      this.valueGraduation = this.$store.state.graduation
     }
   }
 }

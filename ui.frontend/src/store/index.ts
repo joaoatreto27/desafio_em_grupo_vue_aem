@@ -117,6 +117,22 @@ const store = new Store({
     setPersonalizada (state, personalizada) {
       state.personalizada = personalizada
       console.log(state.personalizada)
+    },
+    setCertificates (state, certificates) {
+      state.certificates = certificates
+      console.log(state.certificates)
+    },
+    setTeamName (state, teamname) {
+      state.teamname = teamname
+      console.log(state.teamname)
+    },
+    setInstitution (state, institution) {
+      state.institution = institution
+      console.log(state.institution)
+    },
+    setGraduation (state, graduation) {
+      state.graduation = graduation
+      console.log(state.graduation)
     }
 
   },
@@ -166,8 +182,17 @@ const store = new Store({
     setFacebook ({ commit }, facebook) {
       commit('setFacebook', facebook)
     },
-    setPersonalizada ({ commit }, personalizada) {
-      commit('setPersonalizada', personalizada)
+    setCertificates ({ commit }, certificates) {
+      commit('setCertificates', certificates)
+    },
+    setTeamName ({ commit }, teamname) {
+      commit('setTeamName', teamname)
+    },
+    setInstitution ({ commit }, institution) {
+      commit('setInstitution', institution)
+    },
+    setGraduation ({ commit }, graduation) {
+      commit('setGraduation', graduation)
     }
 
   },
