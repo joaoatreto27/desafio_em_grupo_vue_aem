@@ -53,7 +53,7 @@
       />
 
       <div class="containerButton" @click="next">
-        <MyButton text="Next >" classButton="Button ButtonNext" />
+        <MyButton type="0" text="Next" classButton="Button ButtonNext" />
       </div>
     </div>
   </div>
