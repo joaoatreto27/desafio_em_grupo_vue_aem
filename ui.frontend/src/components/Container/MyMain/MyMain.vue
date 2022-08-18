@@ -71,15 +71,15 @@ export default {
     },
     fieldFacebook: {
       type: Boolean,
-      default: true
+      default: false
     },
     fieldInstagram: {
       type: Boolean,
-      default: true
+      default: false
     },
     fieldTwitter: {
       type: Boolean,
-      default: true
+      default: false
     },
     fieldPersonalizada: {
       type: Boolean,
@@ -111,19 +111,19 @@ export default {
     },
     successFacebook: {
       type: Boolean,
-      default: true
+      default: false
     },
     successInstagram: {
       type: Boolean,
-      default: true
+      default: false
     },
     successTwitter: {
       type: Boolean,
-      default: true
+      default: false
     },
     successPersonalizada: {
       type: Boolean,
-      default: true
+      default: false
     },
     successFullname: {
       type: Boolean,
@@ -147,7 +147,7 @@ export default {
     },
     successAcept: {
       type: Boolean,
-      default: true
+      default: false
     },
     successCertificates: {
       type: Boolean,

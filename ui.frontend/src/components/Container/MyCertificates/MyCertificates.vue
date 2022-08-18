@@ -6,6 +6,7 @@
       ClassInput="Certificates"
       Placeholder="https://www.linkedin.com/in/foo-bar-3a0560104/"
       Type="text"
+      idInputs="certificates"
       :valueInput="certificatesValue"
     />
     <div class="buttons">
@@ -28,6 +29,7 @@
       InvalidSpan="Please enter your Team Name"
       Placeholder="https://www.linkedin.com/in/foo-bar-3a0560104/"
       Type="text"
+      idInputs="teamname"
       :valueInput="teamnameValue"
     />
     <MyInput
@@ -38,6 +40,7 @@
       InvalidSpan="Please enter your Institution"
       Placeholder="Universidade Federal da Paraíba"
       Type="text"
+      idInputs="institution"
       :valueInput="institutionValue"
     />
     <MyInput
@@ -48,6 +51,7 @@
       InvalidSpan="Please enter your Graduation"
       Placeholder="Ciências da Computação"
       Type="text"
+      idInputs="graduation"
       :valueInput="graduationValue"
     />
     <div class="containerButton" @click="next">

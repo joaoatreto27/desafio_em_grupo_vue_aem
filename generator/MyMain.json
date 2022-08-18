@@ -1,0 +1,545 @@
+{
+    "project-settings": {
+      "code-owner": "SPA Vue Project",
+      "bundle-path": "../core/src/main/java",
+      "test-path": "../core/src/test/java",
+      "apps-path": "../ui.apps/src/main/content/jcr_root/apps",
+      "component-path": "vue",
+      "model-interface-pkg": "com.vue.core.models",
+      "model-impl-pkg": "com.vue.core.models.impl"
+    },
+    "name": "my-main",
+    "title": "Vue - MyMain",
+    "group": "SPA Vue Project - Content",
+    "type": "components",
+    "options": {
+      "js": false,
+      "jstxt": false,
+      "css": false,
+      "csstxt": false,
+      "html": false,
+      "html-content": false,
+      "slingmodel": true,
+      "testclass": false,
+      "junit-major-version": 5,
+      "content-exporter": true,
+      "model-adaptables": [
+        "request"
+      ],
+      "generic-javadoc": false,
+      "properties": [
+        {
+          "field": "basicLabelFullname",
+          "label": "Label Fullname",
+          "type": "textfield",
+          "json-expose": true,
+          "json-property": "basicLabelFullname"
+        },
+        {
+            "field": "basicPlaceholderFullname",
+            "label": "Placeholder Fullname",
+            "type": "textfield",
+            "json-expose": true,
+            "json-property": "basicPlaceholderFullname"
+          },
+        {
+            "field": "basicLabelNickname",
+            "label": "Label Nickname",
+            "type": "textfield",
+            "json-expose": true,
+            "json-property": "basicLabelNickname"
+          },
+          {
+            "field": "basicPlaceholderNickname",
+            "label": "Placeholder Nickname",
+            "type": "textfield",
+            "json-expose": true,
+            "json-property": "basicPlaceholderNickname"
+          },
+          {
+            "field": "basicLabelEmail",
+            "label": "Label Email",
+            "type": "textfield",
+            "json-expose": true,
+            "json-property": "basicLabelEmail"
+          },
+          {
+            "field": "basicPlaceholderEmail",
+            "label": "Placeholder Email",
+            "type": "textfield",
+            "json-expose": true,
+            "json-property": "basicPlaceholderEmail"
+          },
+          {
+            "field": "basicLabelPhone",
+            "label": "Label Phone",
+            "type": "textfield",
+            "json-expose": true,
+            "json-property": "basicLabelPhone"
+          },
+          {
+            "field": "basicPlaceholderPhone",
+            "label": "Placeholder Phone",
+            "type": "textfield",
+            "json-expose": true,
+            "json-property": "basicPlaceholderPhone"
+          },
+          {
+            "field": "basicLabelBirthday",
+            "label": "Label Birthday",
+            "type": "textfield",
+            "json-expose": true,
+            "json-property": "basicLabelBirthday"
+          },
+          {
+            "field": "basicLabelAccept",
+            "label": "Label checkbox accept",
+            "type": "textfield",
+            "json-expose": true,
+            "json-property": "basicLabelAcept"
+          },
+          {
+            "field": "basicLabelFullname",
+            "label": "Label Fullname",
+            "type": "textfield",
+            "json-expose": true,
+            "json-property": "basicLabelFullname"
+          },
+          {
+            "field": "socialLabelGithub",
+            "label": "Label Github",
+            "type": "textfield",
+            "json-expose": true,
+            "json-property": "socialLabelGiithub"
+          },
+          {
+            "field": "socialLabelLinkedin",
+            "label": "Label Linkedin",
+            "type": "textfield",
+            "json-expose": true,
+            "json-property": "socialLabelLinkedin"
+          },
+          {
+            "field": "socialLabelInstagram",
+            "label": "Label Instagram",
+            "type": "textfield",
+            "json-expose": true,
+            "json-property": "socialLabelInstagram"
+          },
+          {
+            "field": "socialLabelTwitter",
+            "label": "Label Twitter",
+            "type": "textfield",
+            "json-expose": true,
+            "json-property": "socialLabelTwitter"
+          },
+          {
+            "field": "socialLabelFacebook",
+            "label": "Label Facebook",
+            "type": "textfield",
+            "json-expose": true,
+            "json-property": "socialLabelFacebook"
+          },
+          {
+            "field": "socialPlaceholderGithub",
+            "label": "Placeholder Github",
+            "type": "textfield",
+            "json-expose": true,
+            "json-property": "socialPlaceholderGithub"
+          },
+          {
+            "field": "socialPlaceholderLinkedin",
+            "label": "Placeholder Linkedin",
+            "type": "textfield",
+            "json-expose": true,
+            "json-property": "socialPlaceholderLinkedin"
+          },
+          {
+            "field": "socialPlaceholderInstagram",
+            "label": "Placeholder Instagram",
+            "type": "textfield",
+            "json-expose": true,
+            "json-property": "socialPlaceholderInstagram"
+          },
+          {
+            "field": "socialPlaceholderFacebook",
+            "label": "Placeholder Facebook",
+            "type": "textfield",
+            "json-expose": true,
+            "json-property": "socialPlaceholderFacebook"
+          },
+          {
+            "field": "socialPlaceholderTwitter",
+            "label": "Placeholder Twitter",
+            "type": "textfield",
+            "json-expose": true,
+            "json-property": "socialPlaceholderTwitter"
+          },
+          {
+            "field": "certificatesLabelCertificates",
+            "label": "Label Certificates",
+            "type": "textfield",
+            "json-expose": true,
+            "json-property": "certificatesLabelCertificates"
+          },
+          {
+            "field": "certificatesLabelTeamname",
+            "label": "Label Teamname",
+            "type": "textfield",
+            "json-expose": true,
+            "json-property": "certificatesLabelTeamname"
+          },
+          {
+            "field": "certificatesLabelInstitution",
+            "label": "Label Institution",
+            "type": "textfield",
+            "json-expose": true,
+            "json-property": "certificatesLabelInstitution"
+          },
+          {
+            "field": "certificatesLabelGraduation",
+            "label": "Label Graduation",
+            "type": "textfield",
+            "json-expose": true,
+            "json-property": "certificatesLabelGraduation"
+          },
+          {
+            "field": "certificatesPlaceholderCertificates",
+            "label": "Placeholder Certificates",
+            "type": "textfield",
+            "json-expose": true,
+            "json-property": "certificatesPlaceholderCertificates"
+          },
+          {
+            "field": "certificatesPlaceholderTeamname",
+            "label": "Placeholder Teamname",
+            "type": "textfield",
+            "json-expose": true,
+            "json-property": "certificatesPlaceholderTeamname"
+          },
+          {
+            "field": "certificatesPlaceholderInstitution",
+            "label": "Placeholder Institution",
+            "type": "textfield",
+            "json-expose": true,
+            "json-property": "certificatesPlaceholderIndstitution"
+          },
+          {
+            "field": "certificatesPlaceholderGraduation",
+            "label": "Placeholder Graduation",
+            "type": "textfield",
+            "json-expose": true,
+            "json-property": "certificatesPlaceholderGraduation"
+          },
+          {
+            "field": "buttonNext",
+            "label": "Texto do botão Next",
+            "type": "textfield",
+            "json-expose": true,
+            "json-property": "buttonNext"
+          },
+          {
+            "field": "buttonMore",
+            "label": "Texto do botão More",
+            "type": "textfield",
+            "json-expose": true,
+            "json-property": "buttonMore"
+          },
+          {
+            "field": "buttonFinish",
+            "label": "Texto do botão Finish",
+            "type": "textfield",
+            "json-expose": true,
+            "json-property": "buttonFinish"
+          },
+          {
+            "field": "buttonReturn",
+            "label": "Texto do botão Return",
+            "type": "textfield",
+            "json-expose": true,
+            "json-property": "buttonReturn"
+          },
+          {
+            "field": "menuTab1",
+            "label": "Texto do menu Tab 1",
+            "type": "textfield",
+            "json-expose": true,
+            "json-property": "menuTab1"
+          },
+          {
+            "field": "menuTab2",
+            "label": "Texto do menu Tab 2",
+            "type": "textfield",
+            "json-expose": true,
+            "json-property": "menuTab2"
+          },
+          {
+            "field": "menuTab3",
+            "label": "Texto do menu Tab 3",
+            "type": "textfield",
+            "json-expose": true,
+            "json-property": "menuTab3"
+          },
+          {
+            "field": "mainTitle",
+            "label": "Titulo principal",
+            "type": "textfield",
+            "json-expose": true,
+            "json-property": "mainTitle"
+          },
+          {
+            "field": "fontePrincipal",
+            "label": "Fonte principal",
+            "type": "textfield",
+            "json-expose": true,
+            "json-property": "fontePrincipal"
+          },
+          {
+            "field": "mainTitleColor",
+            "label": "Cor do titulo principal",
+            "type": "textfield",
+            "json-expose": true,
+            "json-property": "mainTitleColor"
+          },
+          {
+            "field": "fontePrincipalColor",
+            "label": "Cor da fonte principal",
+            "type": "textfield",
+            "json-expose": true,
+            "json-property": "fontePrincipalColor"
+          },
+          {
+            "field": "inputColorInput",
+            "label": "Cor do Input",
+            "type": "textfield",
+            "json-expose": true,
+            "json-property": "inputColorInput"
+          },
+          {
+            "field": "mainCardColor",
+            "label": "Cor do Card",
+            "type": "textfield",
+            "json-expose": true,
+            "json-property": "mainCardColor"
+          },
+          {
+            "field": "mainFundoColor",
+            "label": "Cor do fundo geral",
+            "type": "textfield",
+            "json-expose": true,
+            "json-property": "mainFundoColor"
+          },
+          {
+            "field": "fieldFullname",
+            "label": "Checkbox Fullname",
+            "type": "textfield",
+            "json-expose": true,
+            "json-property": "fieldFullname"
+          },
+          {
+            "field": "successFullname",
+            "label": "Checkbox Fullname Success",
+            "type": "textfield",
+            "json-expose": true,
+            "json-property": "successFullname"
+          },
+          {
+            "field": "fieldNickname",
+            "label": "Checkbox Nickname",
+            "type": "textfield",
+            "json-expose": true,
+            "json-property": "fieldNickname"
+          },
+          {
+            "field": "successNickname",
+            "label": "Checkbox Nickname Success",
+            "type": "textfield",
+            "json-expose": true,
+            "json-property": "successNickname"
+          },
+          {
+            "field": "fieldEmail",
+            "label": "Checkbox Email",
+            "type": "textfield",
+            "json-expose": true,
+            "json-property": "fieldEmail"
+          },
+          {
+            "field": "successEmail",
+            "label": "Checkbox Email Success",
+            "type": "textfield",
+            "json-expose": true,
+            "json-property": "successEmail"
+          },
+          {
+            "field": "fieldPhone",
+            "label": "Checkbox Phone",
+            "type": "textfield",
+            "json-expose": true,
+            "json-property": "fieldPhone"
+          },
+          {
+            "field": "successPhone",
+            "label": "Checkbox Phone Success",
+            "type": "textfield",
+            "json-expose": true,
+            "json-property": "successPhone"
+          },
+          {
+            "field": "fieldBirthday",
+            "label": "Checkbox Birthday",
+            "type": "textfield",
+            "json-expose": true,
+            "json-property": "fieldBirthday"
+          },
+          {
+            "field": "successBirthday",
+            "label": "Checkbox Birthday Success",
+            "type": "textfield",
+            "json-expose": true,
+            "json-property": "successBirthday"
+          },
+          {
+            "field": "fieldAcept",
+            "label": "Checkbox Acept",
+            "type": "textfield",
+            "json-expose": true,
+            "json-property": "fieldAcept"
+          },
+          {
+            "field": "fieldLinkedin",
+            "label": "Checkbox Linkedin",
+            "type": "textfield",
+            "json-expose": true,
+            "json-property": "fieldLinkedin"
+          },
+          {
+            "field": "successLinkedin",
+            "label": "Checkbox Linkedin Success",
+            "type": "textfield",
+            "json-expose": true,
+            "json-property": "successLinkedin"
+          },
+          {
+            "field": "fieldGithub",
+            "label": "Checkbox Github",
+            "type": "textfield",
+            "json-expose": true,
+            "json-property": "fieldGithub"
+          },
+          {
+            "field": "successGithub",
+            "label": "Checkbox Github Success",
+            "type": "textfield",
+            "json-expose": true,
+            "json-property": "successGithub"
+          },
+          {
+            "field": "fieldFacebook",
+            "label": "Checkbox Facebook",
+            "type": "textfield",
+            "json-expose": true,
+            "json-property": "fieldFacebook"
+          },
+          {
+            "field": "successFacebook",
+            "label": "Checkbox Facebook Success",
+            "type": "textfield",
+            "json-expose": true,
+            "json-property": "successFacebook"
+          },
+          {
+            "field": "fieldInstagram",
+            "label": "Checkbox Instagram",
+            "type": "textfield",
+            "json-expose": true,
+            "json-property": "fieldInstagram"
+          },
+          {
+            "field": "successInstagram",
+            "label": "Checkbox Instagram Success",
+            "type": "textfield",
+            "json-expose": true,
+            "json-property": "successInstagram"
+          },
+          {
+            "field": "fieldTwitter",
+            "label": "Checkbox Twitter",
+            "type": "textfield",
+            "json-expose": true,
+            "json-property": "fieldTwitter"
+          },
+          {
+            "field": "successTwitter",
+            "label": "Checkbox Twitter Success",
+            "type": "textfield",
+            "json-expose": true,
+            "json-property": "successTwitter"
+          },
+          {
+            "field": "fieldCertificates",
+            "label": "Checkbox Certificates",
+            "type": "textfield",
+            "json-expose": true,
+            "json-property": "fieldCertificates"
+          },
+          {
+            "field": "successCertificates",
+            "label": "Checkbox Certificates Success",
+            "type": "textfield",
+            "json-expose": true,
+            "json-property": "successCertificates"
+          },
+          {
+            "field": "fieldTeamname",
+            "label": "Checkbox Teamname",
+            "type": "textfield",
+            "json-expose": true,
+            "json-property": "fieldTeamname"
+          },
+          {
+            "field": "successTeamname",
+            "label": "Checkbox Teamname Success",
+            "type": "textfield",
+            "json-expose": true,
+            "json-property": "successTeamname"
+          },
+          {
+            "field": "fieldInstitution",
+            "label": "Checkbox Institution",
+            "type": "textfield",
+            "json-expose": true,
+            "json-property": "fieldInstitution"
+          },
+          {
+            "field": "successInstitution",
+            "label": "Checkbox Institution Success",
+            "type": "textfield",
+            "json-expose": true,
+            "json-property": "successInstitution"
+          },
+          {
+            "field": "fieldGraduation",
+            "label": "Checkbox Graduation",
+            "type": "textfield",
+            "json-expose": true,
+            "json-property": "fieldGraduation"
+          },
+          {
+            "field": "successGraduation",
+            "label": "Checkbox Graduation Success",
+            "type": "textfield",
+            "json-expose": true,
+            "json-property": "successGraduation"
+          },
+          {
+            "field": "butonsColor",
+            "label": "Checkbox Graduation Success",
+            "type": "textfield",
+            "json-expose": true,
+            "json-property": "butonsColor"
+          }
+        
+      ]
+    }
+  }

@@ -21,12 +21,12 @@ const store = new Store({
     twitter: '',
     facebook: '',
     personalizada: '',
-    labelPersonalizada: '',
-    placeholderPersonalizada: '',
     certificates: '',
     teamname: '',
     institution: '',
     graduation: '',
+    labelPersonalizada: '',
+    placeholderPersonalizada: '',
     fieldFullname: true,
     fieldNickname: true,
     fieldEmail: true,
@@ -117,6 +117,19 @@ const store = new Store({
     setPersonalizada (state, personalizada) {
       state.personalizada = personalizada
       console.log(state.personalizada)
+    },
+    setCertificates (state, certificates) {
+      state.certificates = certificates
+      console.log(state.certificates)
+    },
+    setTeamname (state, teamname) {
+      state.teamname = teamname
+    },
+    setInstitution (state, institution) {
+      state.institution = institution
+    },
+    setGraduation (state, graduation) {
+      state.graduation = graduation
     }
 
   },
@@ -168,6 +181,18 @@ const store = new Store({
     },
     setPersonalizada ({ commit }, personalizada) {
       commit('setPersonalizada', personalizada)
+    },
+    setCertificates ({ commit }, certificates) {
+      commit('setCertificates', certificates)
+    },
+    setTeamname ({ commit }, teamname) {
+      commit('setTeamname', teamname)
+    },
+    setInstitution ({ commit }, institution) {
+      commit('setInstitution', institution)
+    },
+    setGraduation ({ commit }, graduation) {
+      commit('setGraduation', graduation)
     }
 
   },
