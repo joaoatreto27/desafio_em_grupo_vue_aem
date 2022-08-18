@@ -16,7 +16,7 @@
     <p class="text">Institution: {{ institution }}</p>
     <p class="text">Graduation: {{ graduation }}</p>
     <div class="containerButton" @click="resetPage">
-      <MyButton type="1" text="Return" classButton="Button ButtonReturn" />
+      <MyButton type="1" text="Return" classButton="return" />
     </div>
   </div>
 </template>

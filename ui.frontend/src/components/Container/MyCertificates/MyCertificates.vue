@@ -81,44 +81,6 @@ export default {
   },
   methods: {
     next () {
-      const teamnameError = document.getElementById('teamnameError')
-      const institutionError = document.getElementById('institutionError')
-      const graduationError = document.getElementById('graduationError')
-      this.isOK = false
-      if ( // eslint-disable-next-line no-useless-escape
-        /^https?:\/\/(?:www\.)?[-a-zA-Z0-9@:%._\+~#=]{1,256}\.[a-zA-Z0-9()]{1,6}\b(?:[-a-zA-Z0-9()@:%_\+.~#?&\/=]*)$/.test(
-          this.$store.state.teamname
-        )
-      ) {
-        teamnameError.style.visibility = 'hidden'
-        this.isOK = true
-      } else {
-        teamnameError.style.visibility = 'visible'
-        this.isOK = false
-      }
-
-      if ( // eslint-disable-next-line no-useless-escape
-        this.$store.state.graduation
-      ) {
-        graduationError.style.visibility = 'hidden'
-        this.isOK = true
-      } else {
-        graduationError.style.visibility = 'visible'
-        this.isOK = false
-      }
-
-      if ( // eslint-disable-next-line no-useless-escape
-        this.$store.state.institution
-      ) {
-        institutionError.style.visibility = 'hidden'
-        this.isOK = true
-      } else {
-        institutionError.style.visibility = 'visible'
-        this.isOK = false
-      }
-      if (this.isOK) {
-
-      }
       this.$store.state.tab = 'success'
     },
     getData () {
