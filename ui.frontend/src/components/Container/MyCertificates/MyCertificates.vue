@@ -6,8 +6,10 @@
       ClassInput="Certificates"
       Placeholder="https://www.linkedin.com/in/foo-bar-3a0560104/"
       Type="text"
-      :valueInput="valueCertificates"
-      v-if="this.$store.state.fieldCertificates == true"
+
+      idInputs="certificates"
+      :valueInput="certificatesValue"
+
     />
     <div class="buttons">
         <MyButton
@@ -29,8 +31,10 @@
       InvalidSpan="Please enter your Team Name"
       Placeholder="https://www.linkedin.com/in/foo-bar-3a0560104/"
       Type="text"
-      :valueInput="valueTeamName"
-      v-if="this.$store.state.fieldTeamName == true"
+
+      idInputs="teamname"
+      :valueInput="teamnameValue"
+
     />
     <MyInput
       ClassDiv="fullDiv"
@@ -40,8 +44,10 @@
       InvalidSpan="Please enter your Institution"
       Placeholder="Universidade Federal da Paraíba"
       Type="text"
-      :valueInput="valueInstitution"
-      v-if="this.$store.state.fieldInstitution == true"
+
+      idInputs="institution"
+      :valueInput="institutionValue"
+
     />
     <MyInput
       ClassDiv="fullDiv"
@@ -51,8 +57,9 @@
       InvalidSpan="Please enter your Graduation"
       Placeholder="Ciências da Computação"
       Type="text"
-      :valueInput="valueGraduation"
-      v-if="this.$store.state.fieldGraduation == true"
+      idInputs="graduation"
+      :valueInput="graduationValue"
+
     />
     <div class="containerButton" @click="next">
         <MyButton text="Finish" classButton="Button" type="1" />

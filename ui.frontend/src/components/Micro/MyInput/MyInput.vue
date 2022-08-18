@@ -75,7 +75,7 @@ export default {
 
   methods: {
 
-    ...mapActions(['setFullName', 'setNickName', 'setEmail', 'setPhone', 'setDay', 'setMonth', 'setYear', 'setLinkedin', 'setGithub', 'setFacebook', 'setInstagram', 'setTwitter', 'setPersonalizada']),
+    ...mapActions(['setFullName', 'setNickName', 'setEmail', 'setPhone', 'setDay', 'setMonth', 'setYear', 'setLinkedin', 'setGithub', 'setFacebook', 'setInstagram', 'setTwitter', 'setPersonalizada', 'setCertificates', 'setTeamname', 'setInstitution', 'setGraduation']),
 
     getValue (e) {
       switch (this.idInputs) {
@@ -108,6 +108,18 @@ export default {
           break
         case 'github':
           this.setGithub(e.target.value)
+          break
+        case 'certificates':
+          this.setCertificates(e.target.value)
+          break
+        case 'teamname':
+          this.setTeamname(e.target.value)
+          break
+        case 'institution':
+          this.setInstitution(e.target.value)
+          break
+        case 'graduation':
+          this.setGraduation(e.target.value)
           break
       }
     }
