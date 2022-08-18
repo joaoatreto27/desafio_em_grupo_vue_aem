@@ -61,17 +61,21 @@ import MyButton from '../../Micro/MyButton/MyButton.vue'
 import MyInput from '../../Micro/MyInput/MyInput.vue'
 
 export default {
-
   // eslint-disable-next-line
-  name: "MyCertificates",
+  name: 'MyCertificates',
   components: {
-    MyInput,
-    MyButton
+    MyButton,
+    MyInput
+  },
+  methods: {
+    next () {
+      this.$store.state.tab = 'success'
+    }
   }
 }
 
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
 @import "./MyCertificates.scss";
 </style>
