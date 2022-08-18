@@ -3,39 +3,43 @@
 
       <div class="inputs-input">
         <MyInput
-          LabelInput="Linkedin"
-          Placeholder="https://www.linkedin.com/in/foo-bar-3a0560104/"
+          :LabelInput="socialLabelLinkedin"
+          :Placeholder="socialPlaceholderLinkedin"
           idInputs="linkedin"
+          :valueInput="valueLinkedin"
           v-if="this.$store.state.fieldLinkedin == true"/>
       </div>
       <div class="inputs-input">
         <MyInput
-          LabelInput="Github *"
-          Placeholder="https://github.com/foobar"
+          :LabelInput="socialLabelGithub"
+          :Placeholder="socialPlaceholderGithub"
           idInputs="github"
           idSpan="githubError"
           InvalidSpan="Please enter your Github"
+          :valueInput="valueGithub"
           v-if="this.$store.state.fieldGithub == true" />
       </div>
       <div class="inputs-input">
         <MyInput
-          LabelInput="Facebook"
-          Placeholder="https://www.facebook.com/foobar"
+          :LabelInput="socialLabelFacebook"
+          :Placeholder="socialPlaceholderFacebook"
           idInputs="facebook"
+          :valueInput="valueFacebook"
           v-if="this.$store.state.fieldFacebook == true" />
       </div>
       <div class="inputs-input">
         <MyInput
-          LabelInput="Instagram"
-          Placeholder="https://www.instagram.com/foobar"
+          :LabelInput="socialLabelInstagram"
+          :Placeholder="socialPlaceholderInstagram"
           idInputs="instagram"
           v-if="this.$store.state.fieldInstagram== true" />
       </div>
       <div class="inputs-input">
         <MyInput
-          LabelInput="Twitter *"
-          Placeholder="https://www.twitter.com/foobar"
+          :LabelInput="socialLabelTwitter"
+          :Placeholder="socialPlaceholderTwitter"
           idInputs="twitter"
+          :valueInput="valueTwitter"
           v-if="this.$store.state.fieldTwitter == true" />
       </div>
       <div class="inputs-input">
@@ -43,6 +47,7 @@
           :LabelInput="labelPersonalizada"
           :Placeholder="placeholderPersonalizada"
           idInputs="personalizada"
+          :valueInput="valuePersonalizada"
           v-if="this.$store.state.fieldPersonalizada == true" />
       </div>
 
@@ -61,6 +66,16 @@ export default {
   components: {
     MyButton,
     MyInput
+  },
+  data () {
+    return {
+      valueLinkedin: '',
+      valueGithub: '',
+      valueFacebook: '',
+      valueInstagram: '',
+      valueTwitter: '',
+      valuePersonalizada: ''
+    }
   },
   methods: {
     next () {
@@ -85,6 +100,14 @@ export default {
     fieldPersonalizada () {
       this.labelPersonalizada = this.$store.state.labelPersonalizada
       this.placeholderPersonalizada = this.$store.state.placeholderPersonalizada
+    },
+    getData () {
+      this.valueLinkedin = this.$store.state.linkedin
+      this.valueGithub = this.$store.state.github
+      this.valueFacebook = this.$store.state.facebook
+      this.valueInstagram = this.$store.state.instagram
+      this.valueTwitter = this.$store.state.twitter
+      this.valuePersonalizada = this.$store.state.personalizada
     }
   },
   props: {
@@ -95,10 +118,56 @@ export default {
     placeholderPersonalizada: {
       type: String,
       default: 'default'
+    },
+    socialLabelLinkedin: {
+      type: String,
+      default: 'Linkedin'
+    },
+    socialLabelGithub: {
+      type: String,
+      default: 'Github'
+    },
+    socialLabelFacebook: {
+      type: String,
+      default: 'Facebook'
+    },
+    socialLabelInstagram: {
+      type: String,
+      default: 'Instagram'
+    },
+    socialLabelTwitter: {
+      type: String,
+      default: 'Twitter'
+    },
+    socialPlaceholderLinkedin: {
+      type: String,
+      default: 'https://www.linkedin.com/in/'
+    },
+    socialPlaceholderGithub: {
+      type: String,
+      default: 'https://github.com/foobar'
+    },
+    socialPlaceholderFacebook: {
+      type: String,
+      default: 'https://www.facebook.com/foobar'
+    },
+    socialPlaceholderInstagram: {
+      type: String,
+      default: 'https://www.instagram.com/foobar'
+    },
+    socialPlaceholderTwitter: {
+      type: String,
+      default: 'https://www.twitter.com/foobar'
+    },
+    socialPlaceholderPersonalizada: {
+      type: String,
+      default: 'https://www.foobar.com/'
     }
+
   },
   created () {
     this.fieldPersonalizada()
+    this.getData()
   }
 
 }

@@ -177,9 +177,9 @@ input {
   border: 2px solid #aaaaaa;
   border-radius: 4px;
   width: 100%;
-  height: 40px;
+  height: 35px;
   background: transparent;
-  color: #767676;
+  color: #000000;
   font-size: 1em;
   padding-left: 10px;
   margin-top: 5px;
