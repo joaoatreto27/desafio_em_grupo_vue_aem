@@ -184,7 +184,7 @@ export default {
     box-sizing: border-box;
     display: flex;
     width: 110px;
-    height: 40px;
+    height: 35px;
     padding: 5px;
     border: 2px solid #AAAAAA;
     border-radius: 4px;
@@ -202,7 +202,7 @@ export default {
 .birthdaySelect {
     box-sizing: border-box;
     width: 103px;
-    height: 40px;
+    height: 35px;
     background: #FFFFFF;
     border: 2px solid #AAAAAA;
     border-radius: 4px;

@@ -5,10 +5,18 @@
       Placeholder="Foo Bar"
       idInputs="fullName"
       idSpan="fullNameError"
+      :valueInput="valueFullname"
       InvalidSpan="Please enter your name"
+      v-if="this.$store.state.fieldFullname == true"
     />
 
-    <MyInput LabelInput="Nickname" Placeholder="Juanito" />
+    <MyInput
+      LabelInput="Nickname"
+      Placeholder="Juanito"
+      idInputs="nickname"
+      :valueInput="valueNickname"
+      v-if="this.$store.state.fieldNickname == true"
+     />
 
     <div class="emailPhoneBody">
       <MyInput
@@ -18,6 +26,8 @@
         idSpan="emailError"
         InvalidSpan="Please enter your Email"
         idInputs="emailInput"
+        :valueInput="valueEmail"
+        v-if="this.$store.state.fieldEmail == true"
       />
 
       <MyInput
@@ -25,6 +35,8 @@
         LabelInput="Phone"
         Placeholder="(83) 00000-0000"
         idInputs="phoneInput"
+        :valueInput="valuePhone"
+        v-if="this.$store.state.fieldPhone == true"
       />
     </div>
 
@@ -37,6 +49,7 @@
         checkboxid="checkbox"
         content="I accept the terms and privacy"
         class="chkx"
+        v-if="this.$store.state.fieldAcept == true"
       />
 
       <div class="containerButton" @click="next">
@@ -63,7 +76,14 @@ export default {
   },
   data () {
     return {
-      isOK: undefined
+      isOK: undefined,
+      valueFullname: '',
+      valueNickname: '',
+      valueEmail: '',
+      valuePhone: '',
+      valueAge: '',
+      valueCheckbox: false
+
     }
   },
   methods: {
@@ -113,8 +133,20 @@ export default {
       if (this.isOK) {
         this.$store.state.tab = 'social'
       }
+    },
+    getData () {
+      console.log('Getdatadabasic')
+      this.valueFullname = this.$store.state.fullname
+      this.valueNickname = this.$store.state.nickname
+      this.valueEmail = this.$store.state.email
+      this.valuePhone = this.$store.state.phone
+      this.valueAge = this.$store.state.age
     }
+  },
+  created () {
+    this.getData()
   }
+
 }
 </script>
 
